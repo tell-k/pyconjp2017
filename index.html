@@ -30,16 +30,22 @@
 </div>
 <div class="section" id="beproud-inc-connpass">
 <h2>Beproud.inc - connpass<a class="headerlink" href="#beproud-inc-connpass" title="Permalink to this headline">¶</a></h2>
-<div class="figure" id="id41">
+<div class="figure" id="id42">
 <img alt="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/okbyv2hm.png" src="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/okbyv2hm.png" />
 <p class="caption"><span class="caption-text"><a class="reference external" href="http://connpass.com/">http://connpass.com/</a></span></p>
 </div>
 </div>
 <div class="section" id="pyq-python">
 <h2>PyQ - Pythonオンライン学習サービス<a class="headerlink" href="#pyq-python" title="Permalink to this headline">¶</a></h2>
-<div class="figure" id="id42">
+<div class="figure" id="id43">
 <a class="reference internal image-reference" href="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png"><img alt="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png" src="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://pyq.jp/">https://pyq.jp/</a>  <strong>（機械学習はじめました）</strong></span></p>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://pyq.jp/">https://pyq.jp/</a></span></p>
+</div>
+</div>
+<div class="section" id="pyq">
+<h2>PyQ - 機械学習はじめました<a class="headerlink" href="#pyq" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/nishio.png"><img alt="_images/nishio.png" src="_images/nishio.png" style="width: 70%;" /></a>
 </div>
 </div>
 <div class="section" id="id2">
@@ -66,9 +72,9 @@
 <div class="section" id="id5">
 <h2>前提<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>サンプルコードは Python3.6 です。</li>
-<li>分散システムとかジョブキューとかそういう話はしません。</li>
-<li>ライブラリのがっつりした使い方も説明しません。</li>
+<li>サンプルコードは Python3.6 です</li>
+<li>分散システムとかジョブキューとかそういう話はしません</li>
+<li>ライブラリのがっつりした使い方も説明しません</li>
 </ul>
 </div>
 <div class="section" id="id6">
@@ -89,7 +95,7 @@
 <blockquote>
 <div><ul class="simple">
 <li>コルーチン/イベントループ/I/O多重化</li>
-<li>Python 非同期ライブラリ</li>
+<li>Pythonの非同期ライブラリ</li>
 <li>asyncioの話</li>
 </ul>
 </div></blockquote>
@@ -113,8 +119,8 @@
 <ul class="simple">
 <li>ここでは <a class="reference external" href="https://www.amazon.co.jp/dp/4873114357">並列コンピューティング技法</a> より定義を拝借</li>
 <li>システムが複数の動作を <code class="docutils literal"><span class="pre">実行状態に保てる</span></code> ことを並行(<code class="docutils literal"><span class="pre">concurrent</span></code>)と呼ぶ</li>
-<li>複数の動作を <code class="docutils literal"><span class="pre">同時に実行できる</span></code> ことを並列(<code class="docutils literal"><span class="pre">parallel</span></code>)と呼ぶ。</li>
-<li>並行 は 並列を <code class="docutils literal"><span class="pre">包含</span></code> する概念である。</li>
+<li>複数の動作を <code class="docutils literal"><span class="pre">同時に実行できる</span></code> ことを並列(<code class="docutils literal"><span class="pre">parallel</span></code>)と呼ぶ</li>
+<li>並行 は 並列を <code class="docutils literal"><span class="pre">包含</span></code> する概念である</li>
 </ul>
 <p>雑に言うと</p>
 <ul class="simple">
@@ -139,7 +145,7 @@
 </div></blockquote>
 <ul class="simple">
 <li>どちらの負荷なのかによって並行処理の取るべき手段が変わる</li>
-<li>次に実際にPythonで並行/並列処理を書いてみましょう。</li>
+<li>次に実際にPythonで並行/並列処理を書いてみましょう</li>
 </ul>
 </div>
 <div class="section" id="concurrent-futures">
@@ -236,7 +242,7 @@
 <div class="section" id="threadpoolexecuter-cpu">
 <h2>ThreadPoolExecuter - CPUバウンドの例<a class="headerlink" href="#threadpoolexecuter-cpu" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>次に同じThreadPoolExecuterで <code class="docutils literal"><span class="pre">CPUバウンドな処理</span></code> を実行して見ましょう</li>
+<li>次に同じThreadPoolExecuterで <code class="docutils literal"><span class="pre">CPUバウンドな処理</span></code> を実行してみましょう</li>
 </ul>
 <p>例えば</p>
 <ul class="simple">
@@ -320,7 +326,7 @@
 </ul>
 <p>ちなみに</p>
 <ul class="simple">
-<li>I/O処理や、一部のC拡張モジュールなどでは <code class="docutils literal"><span class="pre">GILが解放される</span></code> らしいです。</li>
+<li>I/O処理や、一部のC拡張モジュールなどでは <code class="docutils literal"><span class="pre">GILが解放される</span></code> らしいです</li>
 <li><a class="reference external" href="https://docs.python.org/ja/3/glossary.html#term-global-interpreter-lock">用語集 &gt; global interpreter lock</a></li>
 <li><a class="reference external" href="http://methane.hatenablog.jp/entry/20111203/1322900647">Python3 Advent Calender 3日目 - New GIL を理解する</a></li>
 </ul>
@@ -474,7 +480,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <ul class="simple">
 <li>基本的にI/O処理中はプログラムはブロックされる</li>
 <li>これを <code class="docutils literal"><span class="pre">同期I/O(ブロッキングI/O)</span></code> と呼ぶ</li>
-<li>対してプロックしないようにI/O処理することを <code class="docutils literal"><span class="pre">非同期I/O(ノンブロッキングI/O)</span></code> と呼ぶ。</li>
+<li>対してプロックしないようにI/O処理することを <code class="docutils literal"><span class="pre">非同期I/O(ノンブロッキングI/O)</span></code> と呼ぶ</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -522,9 +528,9 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <ul class="simple">
 <li>シングルスレッドで複数のI/O(ファイル・ディスクリプタ)を扱う必要がある</li>
 <li>UNIX系ではI/O多重化して管理するシステムコール(select/epoll/kqueue)を主に利用</li>
-<li>WindowsではIOCPという同種のAPIが利用する</li>
+<li>WindowsではIOCPという同種のAPIを利用する</li>
 </ul>
-<p>主にイベントループのライブラリは内部で</p>
+<p>主にイベントループのライブラリが内部で</p>
 <ul class="simple">
 <li>I/O多重化のライブラリを利用して、I/Oのイベントを監視している</li>
 <li>プラットフォームに適したもの自動で利用してくれる</li>
@@ -567,8 +573,8 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <h2>非同期ライブラリ<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Python には以前から非同期プログラミングをサポートするライブラリが多数あった</li>
-<li>どのライブラリも、先にあげた技術的要素を独自に実装していました。</li>
-<li>結果、同じ非同期処理なのにライブラリ毎に微妙に異なったやり方が状態に</li>
+<li>どのライブラリも、先にあげた技術的要素を独自に実装していました</li>
+<li>結果、同じ非同期処理でも各ライブラリに合わせた実装しなければならなかった</li>
 </ul>
 <table border="1" class="docutils">
 <colgroup>
@@ -595,6 +601,12 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="id33">
+<h2>たくさんフレンズがいるのは良いことだが・・・<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/friends.png"><img alt="_images/friends.png" src="_images/friends.png" style="width: 50%;" /></a>
+</div>
 </div>
 <div class="section" id="asyncio">
 <h2>asyncio<a class="headerlink" href="#asyncio" title="Permalink to this headline">¶</a></h2>
@@ -624,8 +636,8 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </pre></div>
 </div>
 </div>
-<div class="section" id="id34">
-<h2>asyncio 挙動の確認<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id35">
+<h2>asyncio 挙動の確認<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>コルーチンをチェーンする公式のサンプル</li>
 </ul>
@@ -659,15 +671,15 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="id35">
-<h2>asyncio 挙動の確認<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id36">
+<h2>asyncio 挙動の確認<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="https://docs.python.org/ja/3/_images/tulip_coro.png"><img alt="https://docs.python.org/ja/3/_images/tulip_coro.png" src="https://docs.python.org/ja/3/_images/tulip_coro.png" style="width: 90%;" /></a>
 <p><a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#example-chain-coroutines">https://docs.python.org/3/library/asyncio-task.html#example-chain-coroutines</a></p>
 </div>
 <div class="section" id="asyncio-1">
 <h2>asyncioへの対応(1)<a class="headerlink" href="#asyncio-1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>基本的にはasyncioを使うように対応する必要がある。</li>
+<li>基本的にはasyncioを使うように対応する必要がある</li>
 <li>ライブラリは <a class="reference external" href="https://github.com/aio-libs">https://github.com/aio-libs</a> にまとまっている</li>
 </ul>
 <p>普段に使うようなライブラリの置き換え</p>
@@ -692,7 +704,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <h2>asyncioへの対応(3)<a class="headerlink" href="#asyncio-3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://uvloop.readthedocs.io/">http://uvloop.readthedocs.io/</a></li>
-<li>libuv + cython で高速化したイベントループ</li>
+<li>libuv + Cython で高速化したイベントループ</li>
 <li>asyncio のイベントループポリシーを差し替えるだけで使える</li>
 <li>コードはそのままにパフォーマンスを向上できる</li>
 </ul>
@@ -704,8 +716,8 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="id37">
-<h2>まとめ - 並行/並列処理<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id38">
+<h2>まとめ - 並行/並列処理<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>並行は並列を包含する概念</li>
 <li>マルチスレッドはI/Oバウンドには効果あり</li>
@@ -714,8 +726,8 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>C10K問題くらいからシングルスレッドでも非同期処理が必要になった</li>
 </ul>
 </div>
-<div class="section" id="id38">
-<h2>まとめ - 非同期I/O<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id39">
+<h2>まとめ - 非同期I/O<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>シングルスレッドで非同期処理</li>
 <li>イベントループ/IO多重化/コルーチンという技術要素で実現</li>
@@ -724,12 +736,13 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>今後は各種ライブラリがもっとasyncioに対応していくでしょう</li>
 </ul>
 </div>
-<div class="section" id="id39">
-<h2>感謝<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
-<p>忙しい中、レビューしてくださった。&#64;shimizukawaさん、&#64;crochacoさん、&#64;mahataさんありがとうございました。</p>
-</div>
 <div class="section" id="id40">
-<h2>ご静聴ありがとうございました<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<h2>感謝<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<p>忙しい中、レビューしてくださった。&#64;shimizukawaさん、&#64;crochacoさん、&#64;mahataさん、&#64;kamekoさん ありがとうございました。</p>
+<p>また参考にさせていただいた資料、本の著者の皆さま。本当ににありがとうございました。</p>
+</div>
+<div class="section" id="id41">
+<h2>ご静聴ありがとうございました<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
