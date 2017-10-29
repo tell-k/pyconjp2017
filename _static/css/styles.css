@@ -37,6 +37,7 @@
   }
 
   body > div.section > div.section {
+    border:5px solid #f00;
     display: block;
 
     position: absolute;
