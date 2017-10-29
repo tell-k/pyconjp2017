@@ -454,7 +454,8 @@ function addGeneralStyle() {
   var el = document.createElement('link');
   el.rel = 'stylesheet';
   el.type = 'text/css';
-  el.href = PERMANENT_URL_PREFIX + 'styles.css?afaefa';
+  var timeInMs = Date.now();
+  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + timeInMs;
   document.body.appendChild(el);
 
   var el = document.createElement('meta');
