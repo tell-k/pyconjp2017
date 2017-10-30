@@ -141,6 +141,7 @@
   body > div.section > div.section {
     display: none;
   }
+  /*
   body > div.section > div.section.far-past {
     display: block;
     transform: translate(-2040px);
@@ -155,6 +156,7 @@
     -moz-transform: translate(-1020px);
     -webkit-transform: translate3d(-1020px, 0, 0);
   }
+  */
   body > div.section > div.section.current {
     display: block;
     transform: translate(0);
@@ -162,6 +164,7 @@
     -moz-transform: translate(0);
     -webkit-transform: translate3d(0, 0, 0);
   }
+  /*
   body > div.section > div.section.next {
     display: block;
     transform: translate(1020px);
@@ -222,6 +225,7 @@
     -moz-transform: translate(2260px);
     -webkit-transform: translate3d(2260px, 0, 0);
   }
+  */
 }
 
 @media print {
