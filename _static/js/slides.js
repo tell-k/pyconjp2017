@@ -460,7 +460,7 @@ function addGeneralStyle() {
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-  el.content = 'width=device-width,initial-scale=1';
+  el.content = 'width=device-width,height=750,initial-scale=1';
   document.querySelector('head').appendChild(el);
 
   var el = document.createElement('meta');
