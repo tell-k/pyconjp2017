@@ -230,6 +230,15 @@
   }
 }
 
+@media screen and (orientation=portrait) {
+  body > div.section > div.section {
+    height: 30%;
+  }
+  .slide-area {
+    height: 30%;
+  }
+}
+
 @media print {
   /* Set page layout */
 
