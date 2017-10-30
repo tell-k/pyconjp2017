@@ -230,13 +230,15 @@
   }
 }
 
-@media screen and (orientation=portrait) {
+@media screen and (orientation: portrait) {
+
   body > div.section > div.section {
-    height: 30%;
+    height: calc(100vw * 0.682);
   }
   .slide-area {
-    height: 30%;
+    height: calc(100vw * 0.682);
   }
+
 }
 
 @media print {
