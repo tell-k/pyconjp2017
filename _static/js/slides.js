@@ -452,14 +452,15 @@ function addFontStyle() {
 
 function addGeneralStyle() {
   var el = document.createElement('link');
+  var timeInMs = Date.now();
   el.rel = 'stylesheet';
   el.type = 'text/css';
-  el.href = PERMANENT_URL_PREFIX + 'styles.css';
+  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + timeInMs;
   document.body.appendChild(el);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-  el.content = 'width=1100,height=750';
+  el.content = 'width=device-width,initial-scale=1';
   document.querySelector('head').appendChild(el);
 
   var el = document.createElement('meta');
