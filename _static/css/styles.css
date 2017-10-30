@@ -9,11 +9,9 @@
     padding: 0;
 
     display: block !important;
-    
-    /*
+
     height: 100%;
     min-height: 740px;
-    */
 
     overflow-x: hidden;
     overflow-y: auto;
@@ -44,8 +42,6 @@
     position: absolute;
     overflow: hidden;
 
-    width: 50%;
-    /*
     width: 900px;
     height: 700px;
 
@@ -54,7 +50,6 @@
 
     margin-left: -450px;
     margin-top: -350px;
-    */
 
     padding: 40px 60px;
 
@@ -71,7 +66,6 @@
     background-color: white;
 
     border: 1px solid rgba(0, 0, 0, .3);
-    border: 5px solid #f00;
 
     transition: transform .3s ease-out;
     -o-transition: -o-transform .3s ease-out;
@@ -81,17 +75,14 @@
 
   body > div.section > div.section, 
   body > div.section.layout-widescreen > div.section {
-    /*
     margin-left: -550px;
     width: 1100px;
-    */
   }
   body > div.section.layout-faux-widescreen > div.section {
-    /*
     margin-left: -550px;
     width: 1100px;
+
     padding: 40px 160px;
-    */
   }
 
   body > div.section > div.section:not(.nobackground):not(.biglogo), 
@@ -108,10 +99,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    /*
     width: 150px;
     height: 700px;
-    */
 
     left: 50%;
     top: 50%;
@@ -124,7 +113,6 @@
     -moz-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
-  /*
   #prev-slide-area {
     margin-left: -550px;
   }
@@ -141,14 +129,12 @@
   body > div.section.layout-faux-widescreen #next-slide-area {
     margin-left: 500px;
   }
-  */
 
   /* Slides */
 
   body > div.section > div.section {
     display: none;
   }
-  /*
   body > div.section > div.section.far-past {
     display: block;
     transform: translate(-2040px);
@@ -184,9 +170,7 @@
     -moz-transform: translate(2040px);
     -webkit-transform: translate3d(2040px, 0, 0);
   }
-  */
 
-  /*
   body > div.section > div.section.far-past,
   body > div.section.layout-widescreen > div.section.far-past,
   body > div.section.layout-faux-widescreen > div.section.far-past {
@@ -205,7 +189,6 @@
     -moz-transform: translate(-1130px);
     -webkit-transform: translate3d(-1130px, 0, 0);
   }
-  */
   body > div.section > div.section.current,
   body > div.section.layout-widescreen > div.section.current,
   body > div.section.layout-faux-widescreen > div.section.current {
@@ -215,7 +198,6 @@
     -moz-transform: translate(0);
     -webkit-transform: translate3d(0, 0, 0);
   }
-  /*
   body > div.section > div.section.next,
   body > div.section.layout-widescreen > div.section.next,
   body > div.section.layout-faux-widescreen > div.section.next {
@@ -234,7 +216,6 @@
     -moz-transform: translate(2260px);
     -webkit-transform: translate3d(2260px, 0, 0);
   }
-  */
 }
 
 @media print {
