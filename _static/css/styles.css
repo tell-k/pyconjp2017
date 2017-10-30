@@ -106,7 +106,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    /*j
+    /*
     width: 150px;
     height: 700px;
     */
@@ -122,6 +122,7 @@
     -moz-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
+  /*
   #prev-slide-area {
     margin-left: -550px;
   }
@@ -138,6 +139,7 @@
   body > div.section.layout-faux-widescreen #next-slide-area {
     margin-left: 500px;
   }
+  */
 
   /* Slides */
 
