@@ -44,6 +44,7 @@
     position: absolute;
     overflow: hidden;
 
+    width: 50%;
     /*
     width: 900px;
     height: 700px;
@@ -70,6 +71,7 @@
     background-color: white;
 
     border: 1px solid rgba(0, 0, 0, .3);
+    border: 5px solid #f00;
 
     transition: transform .3s ease-out;
     -o-transition: -o-transform .3s ease-out;
