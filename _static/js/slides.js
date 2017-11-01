@@ -456,22 +456,20 @@ function addGeneralStyle() {
   el.type = 'text/css';
 
 
-  el.href = PERMANENT_URL_PREFIX + 'styles.css';
+  var timeInMs = Date.now();
+  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + timeInMs;
   document.body.appendChild(el);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
 
-  // 0.682
   // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  var width = screen.width;
-  var height = Math.floor(width * 0.682);
-
-  console.log(width);
-  console.log(height);
-
-  if width
-
+  var width = 1100;
+  var height = 750;
+  if (screen.width < 1100) {
+    width = screen.width;
+    height = Math.floor(width * 0.682);
+  }
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
