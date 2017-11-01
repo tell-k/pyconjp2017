@@ -469,6 +469,8 @@ function addGeneralStyle() {
   if (screen.width < 1100) {
     width = screen.width;
     height = Math.floor(width * 0.682);
+    alert(width);
+    alert(height);
   }
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
