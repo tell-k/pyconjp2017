@@ -509,7 +509,9 @@ function addGeneralStyle() {
   var scale = width / 1100;
   var fontsize = Math.floor(fontsize * scale);
 
-  console.log(fontsize, height, width);
+  alert(fontsize);
+  alert(height);
+  alert(width);
 
   var css = '@media screen {';
   css += 'body > div.section > div.section {\n ';
