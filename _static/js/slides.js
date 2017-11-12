@@ -490,7 +490,7 @@ function addGeneralStyle() {
      swidth = 1100;
      height = 750;
   }
-  el.content = 'height=' + 667 + ',width=' + swidth;
+  el.content = 'height=' + screen.height + ',width=' + swidth;
   document.querySelector('head').appendChild(el);
   // 横長 screen.width > screen.height
   if (screen.width >= screen.height) {
@@ -576,6 +576,7 @@ function initialize() {
     handleDomLoaded();
   } else {
     handleDomLoaded();
+    setTimeout(function(){scrollTo(0,1)}, 1);
     // document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
   }
 }
