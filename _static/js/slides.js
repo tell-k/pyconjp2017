@@ -492,7 +492,7 @@ function addGeneralStyle() {
   }
   alert("new");
   alert(height);
-  alert(swdith);
+  alert(swidth);
   el.content = 'height=' + height + ',width=' + swidth;
   document.querySelector('head').appendChild(el);
   // 横長 screen.width > screen.height
