@@ -490,10 +490,7 @@ function addGeneralStyle() {
      swidth = 1100;
      height = 750;
   }
-  alert("new");
-  alert(height);
-  alert(swidth);
-  el.content = 'height=' + height + ',width=' + swidth;
+  el.content = 'height=' + 667 + ',width=' + swidth;
   document.querySelector('head').appendChild(el);
   // 横長 screen.width > screen.height
   if (screen.width >= screen.height) {
