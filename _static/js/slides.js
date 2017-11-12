@@ -455,7 +455,6 @@ function addGeneralStyle() {
   el.rel = 'stylesheet';
   el.type = 'text/css';
 
-
   var timeInMs = Date.now();
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + timeInMs;
   document.body.appendChild(el);
@@ -469,11 +468,72 @@ function addGeneralStyle() {
   if (screen.width < 1100) {
     width = screen.width;
     height = Math.floor(width * 0.682);
-    alert(width);
-    alert(height);
   }
-  el.content = 'width=' + width + ',height=' + height;
+
+  if (screen.width < 1100) {
+    // 横長 screen.width > screen.height
+    if (screen.width >= screen.height) {
+      height = screen.height - 2;
+      width = Math.floor(height * 1.467);
+      if (width > screen.width) {
+        width = screen.width;
+        height = Math.floor(height * (screen.width / width));
+      }
+    // 縦長 screen.width < screen.height
+    } else {
+      width = screen.width;
+      height = Math.floor(width * 0.682);
+    }
+  }
+  var swidth = screen.width;
+  if (screen.width >= 1100) {
+     swidth = 1100;
+     height = 750;
+  }
+  el.content = 'height=' + height + ',width=' + swidth;
   document.querySelector('head').appendChild(el);
+  // 横長 screen.width > screen.height
+  if (screen.width >= screen.height) {
+    height = Math.floor(height * 0.99);
+  // 縦長 screen.width < screen.height
+  } else {
+    height = Math.floor(height * 0.98);
+    width = Math.floor(width * 0.98);
+  }
+  if (width >= 1100) {
+     width = 1100;
+     height = 700;
+  }
+  var fontsize = 26;
+  var scale = width / 1100;
+  var fontsize = Math.floor(fontsize * scale);
+
+  console.log(fontsize, height, width);
+
+  var css = '@media screen {';
+  css += 'body > div.section > div.section {\n ';
+  css += '  font-size: ' + fontsize  + 'px !important;\n';
+  css += '  height: ' + height  + 'px;\n';
+  css += '  width: ' + width + 'px;\n';
+  css += '  margin-left: -' + Math.floor(width * 0.5) + 'px;\n';
+  css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;\n';
+  css += '}';
+  css += '.slide-area {';
+  css += '  width:' + Math.floor(width * 0.167) + 'px;';
+  css += '  height:' + Math.floor(height) + 'px;';
+  css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;';
+  css += '}';
+  css += '}';
+  var head = document.head || document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+
+  style.type = 'text/css';
+  if (style.styleSheet){
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  head.appendChild(style);
 
   var el = document.createElement('meta');
   el.name = 'apple-mobile-web-app-capable';

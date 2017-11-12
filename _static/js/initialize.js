@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $("body > div.section").each(function(i, e){
     var target = null;
     var addElements = [];
