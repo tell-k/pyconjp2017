@@ -504,10 +504,13 @@ function addGeneralStyle() {
      width = 1100;
      height = 700;
   }
+
   var fontsize = 26;
   var scale = width / 1100;
   var fontsize = Math.floor(fontsize * scale);
 
+  alert(height);
+  alert(width);
   console.log(fontsize, height, width);
 
   var css = '@media screen {';
