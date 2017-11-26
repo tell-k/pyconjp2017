@@ -490,7 +490,7 @@ function addGeneralStyle() {
      swidth = 1100;
      height = 750;
   }
-  el.content = 'height=' + 375 + ',width=' + swidth;
+  el.content = 'height=' + height + ',width=' + swidth;
   document.querySelector('head').appendChild(el);
   // 横長 screen.width > screen.height
   if (screen.width >= screen.height) {
@@ -508,10 +508,6 @@ function addGeneralStyle() {
   var fontsize = 26;
   var scale = width / 1100;
   var fontsize = Math.floor(fontsize * scale);
-
-  alert(fontsize);
-  alert(height);
-  alert(width);
 
   var css = '@media screen {';
   css += 'body > div.section > div.section {\n ';
