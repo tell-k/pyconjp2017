@@ -459,28 +459,31 @@ function addGeneralStyle() {
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-  el.content = 'width=1100,height=750';
+
+  width = screen.width;
+  if (screen.width > 1100) {
+      width = 1100;
+  }
+  height = Math.floor(width * 0.682);
+  slideHeight = Math.floor(width * 0.636);
+
+  el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
-  alert(screen.width);
-  alert(screen.height);
-
   fontsize = 26;
-  width = 1100;
-  height = 700;
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
   css += '  font-size: ' + fontsize  + 'px !important;\n';
-  css += '  height: ' + height  + 'px;\n';
+  css += '  height: ' + slideHeight  + 'px;\n';
   css += '  width: ' + width + 'px;\n';
   css += '  margin-left: -' + Math.floor(width * 0.5) + 'px;\n';
-  css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;\n';
+  css += '  margin-top: -' + Math.floor(slideHeight * 0.5) + 'px;\n';
   css += ' }';
   css += ' .slide-area {';
   css += '  width:' + Math.floor(width * 0.167) + 'px;';
-  css += '  height:' + Math.floor(height) + 'px;';
-  css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;';
+  css += '  height:' + Math.floor(slideHeight) + 'px;';
+  css += '  margin-top: -' + Math.floor(slideHeight * 0.5) + 'px;';
   css += ' }';
   css += '}';
 
