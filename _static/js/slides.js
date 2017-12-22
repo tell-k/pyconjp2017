@@ -461,22 +461,26 @@ function addGeneralStyle() {
   if (screen.width > 1100) {
       width = 1100;
   }
+
+  // alert('screen width5');
+  // alert(screen.width);
+  // alert(screen.availWidth);
+  // alert(window.innerWidth);
+  // alert(document.documentElement.clientWidth);
+
+  var el = document.createElement('meta');
+  el.name = 'viewport';
+  el.content = 'width=' + width;
+  // el.content = 'width=' + width + ',height=' + height;
+  document.querySelector('head').appendChild(el);
+
+  if (width < 1100) {
+    width = Math.floor(width - (width * 0.1));
+  }
   ratio = width / 1100;
   height = Math.floor(width * 0.682);
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
-
-  alert('screen width4');
-  alert(screen.width);
-  alert(screen.availWidth);
-  alert(window.innerWidth);
-  alert(document.documentElement.clientWidth);
-
-  var el = document.createElement('meta');
-  el.name = 'viewport';
-   el.content = 'width=' + width;
-  // el.content = 'width=' + width + ',height=' + height;
-  document.querySelector('head').appendChild(el);
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
