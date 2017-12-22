@@ -333,7 +333,7 @@ body > div.section > div.section {
   text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   font-size: 26px;
   line-height: 1.38em;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
 }
 
 b {
@@ -372,7 +372,7 @@ h1 {
   padding-right: 1.2em;
 
   font-weight: 600;
-  letter-spacing: -3px;
+  /* letter-spacing: -3px; */
   color: rgb(51, 51, 51);
 }
 
@@ -424,7 +424,7 @@ h2.special {
 
   font-weight: 600;
 
-  letter-spacing: -2px;
+  /*letter-spacing: -2px;*/
   color: rgb(51, 51, 51);
 }
 
@@ -433,7 +433,7 @@ h2, h3, h4, h5, h6 {
   margin: 0;
   padding-right: 1.2em;
   font-weight: 600;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
   color: rgb(51, 51, 51);
 }
 
@@ -491,7 +491,7 @@ pre {
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
   font-size: 0.8em;
   line-height: 1.2em;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px */;
 
   color: black;
 }
@@ -686,7 +686,7 @@ code.docutils.literal{
 
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
   font-size: 90%;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px */;
   border-radius: 4px;
 
   color: #c7254e;

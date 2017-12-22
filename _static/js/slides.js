@@ -477,6 +477,7 @@ function addGeneralStyle() {
   if (width < 1100) {
     width = Math.floor(width - (width * 0.1));
   }
+
   ratio = width / 1100;
   height = Math.floor(width * 0.682);
   slideHeight = Math.floor(width * 0.636);
