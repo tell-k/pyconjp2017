@@ -454,78 +454,38 @@ function addGeneralStyle() {
   var el = document.createElement('link');
   el.rel = 'stylesheet';
   el.type = 'text/css';
-
-  var timeInMs = Date.now();
-  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + timeInMs;
+  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-
-  // var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  var width = 1100;
-  var height = 750;
-  if (screen.width < 1100) {
-    width = screen.width;
-    height = Math.floor(width * 0.682);
-  }
-
-  if (screen.width < 1100) {
-    // 横長 screen.width > screen.height
-    if (screen.width >= screen.height) {
-      height = screen.height - 2;
-      width = Math.floor(height * 1.467);
-      if (width > screen.width) {
-        width = screen.width;
-        height = Math.floor(height * (screen.width / width));
-      }
-    // 縦長 screen.width < screen.height
-    } else {
-      width = screen.width;
-      height = Math.floor(width * 0.682);
-    }
-  }
-  var swidth = screen.width;
-  if (screen.width >= 1100) {
-     swidth = 1100;
-     height = 750;
-  }
-  el.content = 'height=' + height + ',width=' + swidth;
+  el.content = 'width=1100,height=750';
   document.querySelector('head').appendChild(el);
-  // 横長 screen.width > screen.height
-  if (screen.width >= screen.height) {
-    height = Math.floor(height * 0.99);
-  // 縦長 screen.width < screen.height
-  } else {
-    height = Math.floor(height * 0.98);
-    width = Math.floor(width * 0.98);
-  }
-  if (width >= 1100) {
-     width = 1100;
-     height = 700;
-  }
 
-  var fontsize = 26;
-  var scale = width / 1100;
-  var fontsize = Math.floor(fontsize * scale);
+  alert(screen.width);
+  alert(screen.height);
+
+  fontsize = 26;
+  width = 1100;
+  height = 700;
 
   var css = '@media screen {';
-  css += 'body > div.section > div.section {\n ';
+  css += ' body > div.section > div.section {\n ';
   css += '  font-size: ' + fontsize  + 'px !important;\n';
   css += '  height: ' + height  + 'px;\n';
   css += '  width: ' + width + 'px;\n';
   css += '  margin-left: -' + Math.floor(width * 0.5) + 'px;\n';
   css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;\n';
-  css += '}';
-  css += '.slide-area {';
+  css += ' }';
+  css += ' .slide-area {';
   css += '  width:' + Math.floor(width * 0.167) + 'px;';
   css += '  height:' + Math.floor(height) + 'px;';
   css += '  margin-top: -' + Math.floor(height * 0.5) + 'px;';
+  css += ' }';
   css += '}';
-  css += '}';
-  var head = document.head || document.getElementsByTagName('head')[0],
-      style = document.createElement('style');
 
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
   style.type = 'text/css';
   if (style.styleSheet){
     style.styleSheet.cssText = css;
@@ -533,6 +493,7 @@ function addGeneralStyle() {
     style.appendChild(document.createTextNode(css));
   }
   head.appendChild(style);
+
 
   var el = document.createElement('meta');
   el.name = 'apple-mobile-web-app-capable';
@@ -574,7 +535,6 @@ function initialize() {
     handleDomLoaded();
   } else {
     handleDomLoaded();
-    setTimeout(function(){scrollTo(0,1)}, 1);
     // document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
   }
 }
