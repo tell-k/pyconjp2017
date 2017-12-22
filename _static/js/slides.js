@@ -475,9 +475,11 @@ function addGeneralStyle() {
   alert(width);
   alert(height);
 
-  el.content = 'width=' + width + 'px,height=' + height + 'px';
+  el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
+  width = 300;
+  slideHeight = 200;
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
