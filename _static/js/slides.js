@@ -474,7 +474,8 @@ function addGeneralStyle() {
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-  el.content = 'width=' + width + ',height=' + height;
+   el.content = 'width=' + width;
+  // el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
   var css = '@media screen {';
