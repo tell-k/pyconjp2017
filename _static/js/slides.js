@@ -456,8 +456,6 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
-  var el = document.createElement('meta');
-  el.name = 'viewport';
 
   width = screen.width;
   if (screen.width > 1100) {
@@ -468,13 +466,11 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
-  alert(window.parent.screen.width);
-  alert(window.parent.screen.height);
   alert(screen.width);
-  alert(screen.height);
-  alert(width);
-  alert(height);
+  alert(widow.innerWidth);
 
+  var el = document.createElement('meta');
+  el.name = 'viewport';
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
