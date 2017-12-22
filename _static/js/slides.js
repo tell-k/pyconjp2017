@@ -475,13 +475,11 @@ function addGeneralStyle() {
     if (window.outerWidth === 0 && Math.abs(orien) === 90)  {
       viewHeight = screen.width;
       viewWidth = viewHeight * 1.467;
-      slideWidth = Math.floor(viewWidth - (viewWidth * 0.1));
-      slideHeight = Math.floor(slideWidth * 0.636);
-      slideWidth = viewWidth;
-      slideHeight = viewHeight;
+      slideWidth = viewWidth * 0.9;
+      slideHeight = viewHeight * 0.9;
       ratio = slideWidth / 1100;
       fontSize = Math.floor(26 * ratio);
-      alert("test2");
+      alert("test3");
       alert(viewHeight);
       alert(slideHeight);
       return {
