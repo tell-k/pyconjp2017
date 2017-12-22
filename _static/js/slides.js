@@ -456,14 +456,18 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
+  if (window.innerHeight > window.innerWidth) {
+     var width = screen.width;
+  } else {
+     var width = screen.height;
+  }
 
-  var width = screen.width;
   if (screen.width > 1100) {
       width = 1100;
   }
   height = Math.floor(width * 0.682);
 
-  alert('screen width test5');
+  alert('screen width test6');
   alert(screen.width);
   alert(screen.height);
 
