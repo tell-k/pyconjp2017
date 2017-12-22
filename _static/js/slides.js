@@ -457,7 +457,7 @@ function addGeneralStyle() {
   document.body.appendChild(el);
 
 
-  width = window.innerWidth;
+  var width = window.innerWidth;
   if (window.innerWidth > 1100) {
       width = 1100;
   }
