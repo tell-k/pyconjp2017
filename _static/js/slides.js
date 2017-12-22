@@ -467,57 +467,71 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
+  var getSizes = function () {
+    var orien = window.orientation;
+    var viewWidth = 0,
+        slideWidth = 0;
 
-  var orien = window.orientation;
-  var width = 0;
-  if (window.outerWidth === 0 && Math.abs(orien) === 90)  {
-    width = screen.height;
-  } else {
-    width = screen.width;
-  }
-  //alert(window.orientation);
-  //alert(screen.width);
-  //alert(screen.availWidth);
-  //alert(window.innerWidth);
-  //alert(window.outerWidth);
-  //alert($(window).width());
-  //alert(document.documentElement.clientWidth);
-  //alert($(document).width());
+    if (window.outerWidth === 0 && Math.abs(orien) === 90)  {
+      viewHeight = screen.width;
+      viewWidth = viewHeight + 1.467;
+      slideWidth = Math.floor(viewWidth - (viewWidth * 0.1));
+      slideHeight = Math.floor(slideWidth * 0.636);
+      ratio = slideWidth / 1100;
+      fontSize = Math.floor(26 * ratio);
+      return {
+        'viewWidth': viewWidth,
+        'viewHeight': viewHeight,
+        'slideWidth': slideWidth,
+        'slideHeight': slideHeight,
+        'fontSize': fontSize
+      }
+      // viewWidth = screen.height;
+    } else {
+      viewWidth = screen.width;
+    }
+    var slideWidth = viewWidth;
+    if (screen.width > 1100) {
+        slideWidth = 1100;
+    }
+    viewHeight = Math.floor(slideWidth * 0.682);
+    if (slideWidth < 1100) {
+      slideWidth = Math.floor(slideWidth - (slideWidth * 0.1));
+    }
+    ratio = slideWidth / 1100;
+    slideHeight = Math.floor(slideWidth * 0.636);
+    fontSize = Math.floor(26 * ratio);
 
-  if (screen.width > 1100) {
-      width = 1100;
-  }
-  height = Math.floor(width * 0.682);
+    return {
+      'viewWidth': viewWidth,
+      'viewHeight': viewHeight,
+      'slideWidth': slideWidth,
+      'slideHeight': slideHeight,
+      'fontSize': fontSize
+    }
+  };
+
+  sizes = getSizes();
 
   remove("meta-viewport");
   var el = document.createElement('meta');
   el.id = 'meta-viewport';
   el.name = 'viewport';
-  // el.content = 'width=' + width + ',initial-scale=1.0';
-  el.content = 'width=' + width + ',height=' + height + ',initial-scale=1.0';
+  el.content = 'width=' + sizes.viewWidth + ',height=' + sizes.viewHeight + ',initial-scale=1.0';
   document.querySelector('head').appendChild(el);
-
-  if (width < 1100) {
-    width = Math.floor(width - (width * 0.1));
-  }
-
-  ratio = width / 1100;
-  height = Math.floor(width * 0.682);
-  slideHeight = Math.floor(width * 0.636);
-  fontsize = Math.floor(26 * ratio);
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
-  css += '  font-size: ' + fontsize  + 'px !important;\n';
-  css += '  height: ' + slideHeight  + 'px;\n';
-  css += '  width: ' + width + 'px;\n';
-  css += '  margin-left: -' + Math.floor(width * 0.5) + 'px;\n';
-  css += '  margin-top: -' + Math.floor(slideHeight * 0.5) + 'px;\n';
+  css += '  font-size: ' + sizes.fontSize  + 'px !important;\n';
+  css += '  height: ' + sizes.slideHeight  + 'px;\n';
+  css += '  width: ' + sizes.slideWidth + 'px;\n';
+  css += '  margin-left: -' + Math.floor(sizes.slideWidth * 0.5) + 'px;\n';
+  css += '  margin-top: -' + Math.floor(sizes.slideHeight * 0.5) + 'px;\n';
   css += ' }';
   css += ' .slide-area {';
-  css += '  width:' + Math.floor(width * 0.167) + 'px;';
-  css += '  height:' + Math.floor(slideHeight) + 'px;';
-  css += '  margin-top: -' + Math.floor(slideHeight * 0.5) + 'px;';
+  css += '  width:' + Math.floor(sizes.slideWidth * 0.167) + 'px;';
+  css += '  height:' + Math.floor(sizes.slideHeight) + 'px;';
+  css += '  margin-top: -' + Math.floor(sizes.slideHeight * 0.5) + 'px;';
   css += ' }';
   css += '}';
 
