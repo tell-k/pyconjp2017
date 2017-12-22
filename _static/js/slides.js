@@ -457,8 +457,8 @@ function addGeneralStyle() {
   document.body.appendChild(el);
 
 
-  width = screen.width;
-  if (screen.width > 1100) {
+  width = window.innerWidth;
+  if (window.innerWidth > 1100) {
       width = 1100;
   }
   ratio = width / 1100;
@@ -475,9 +475,6 @@ function addGeneralStyle() {
   el.name = 'viewport';
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
-
-  width = 300;
-  slideHeight = 200;
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
