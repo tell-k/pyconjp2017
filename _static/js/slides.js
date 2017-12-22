@@ -87,8 +87,7 @@ classListProto.add = function (token) {
   if (checkTokenAndGetIndex(this, token) === -1) {
     this.push(token);
     this._updateClassName();
-  }
-};
+  } };
 classListProto.remove = function (token) {
   token += "";
   var index = checkTokenAndGetIndex(this, token);
@@ -464,13 +463,14 @@ function addGeneralStyle() {
   if (screen.width > 1100) {
       width = 1100;
   }
+  ratio = width / 1100;
   height = Math.floor(width * 0.682);
   slideHeight = Math.floor(width * 0.636);
+  fontsize = Math.floor(26 * ratio);
 
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
 
-  fontsize = 26;
 
   var css = '@media screen {';
   css += ' body > div.section > div.section {\n ';
