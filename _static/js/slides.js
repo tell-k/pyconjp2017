@@ -467,13 +467,13 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
-  console.log(screen.width);
-  console.log(screen.availWidth);
-  console.log(window.innerWidth);
-  console.log(window.outerWidth);
-  console.log($(window).width());
-  console.log(document.documentElement.clientWidth);
-  console.log($(document).width());
+  alert(screen.width);
+  alert(screen.availWidth);
+  alert(window.innerWidth);
+  alert(window.outerWidth);
+  alert($(window).width());
+  alert(document.documentElement.clientWidth);
+  alert($(document).width());
 
   var width = screen.width;
   if (screen.width > 1100) {
