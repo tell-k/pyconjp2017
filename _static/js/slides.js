@@ -466,7 +466,7 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
-  alert('screen width3');
+  alert('screen width4');
   alert(screen.width);
   alert(screen.availWidth);
   alert(window.innerWidth);
@@ -509,7 +509,7 @@ function addGeneralStyle() {
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
 
-  setTimeout(function(){ window.scrollTo(0,1); } , 500);
+  setTimeout(function(){ window.scrollTo(0,1); }, 1000);
 };
 
 function showHelpText() {
