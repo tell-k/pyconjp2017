@@ -466,7 +466,7 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
-  alert('screen width2');
+  alert('screen width3');
   alert(screen.width);
   alert(screen.availWidth);
   alert(window.innerWidth);
@@ -508,6 +508,8 @@ function addGeneralStyle() {
   el.name = 'apple-mobile-web-app-capable';
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
+
+  setTimeout(function(){ window.scrollTo(0,1); } , 500);
 };
 
 function showHelpText() {
