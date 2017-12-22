@@ -449,8 +449,19 @@ function addFontStyle() {
   document.body.appendChild(el);
 };
 
+
+function remove(element_id) {
+  var element = document.getElementById(element_id);
+  if (element) {
+    element.outerHTML = "";
+    delete element;
+  }
+}
+
 function addGeneralStyle() {
+  remove("link-styles-css");
   var el = document.createElement('link');
+  el.id = 'link-styles-css';
   el.rel = 'stylesheet';
   el.type = 'text/css';
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
@@ -461,17 +472,14 @@ function addGeneralStyle() {
   } else {
      var width = screen.height;
   }
-
   if (screen.width > 1100) {
       width = 1100;
   }
   height = Math.floor(width * 0.682);
 
-  alert('screen width test6');
-  alert(screen.width);
-  alert(screen.height);
-
+  remove("meta-viewport");
   var el = document.createElement('meta');
+  el.id = 'meta-viewport';
   el.name = 'viewport';
   // el.content = 'width=' + width + ',initial-scale=1.0';
   el.content = 'width=' + width + ',height=' + height + ',initial-scale=1.0';
@@ -501,8 +509,10 @@ function addGeneralStyle() {
   css += ' }';
   css += '}';
 
+  remove("link-override-css");
   var head = document.head || document.getElementsByTagName('head')[0];
   var style = document.createElement('style');
+  style.id = 'link-override-css';
   style.type = 'text/css';
   if (style.styleSheet){
     style.styleSheet.cssText = css;
@@ -511,13 +521,12 @@ function addGeneralStyle() {
   }
   head.appendChild(style);
 
-
+  remove("meta-app-capable");
   var el = document.createElement('meta');
+  el.id = 'meta-app-capable';
   el.name = 'apple-mobile-web-app-capable';
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
-  // setTimeout(function(){ window.scrollTo(0, 3000); }, 1000);
-
 };
 
 function showHelpText() {
@@ -557,6 +566,10 @@ function initialize() {
     // document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
   }
 }
+
+window.addEventListener("orientationchange", function () {
+  alert('change orientation');
+}, false);
 
 // If ?debug exists then load the script relative instead of absolute
 if (!window['_DEBUG'] && document.location.href.indexOf('?debug') !== -1) {
