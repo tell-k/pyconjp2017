@@ -462,7 +462,7 @@ function addGeneralStyle() {
       width = 1100;
   }
 
-  alert('screen width test2');
+  alert('screen width test3');
   alert(screen.width);
   alert(screen.height);
 
