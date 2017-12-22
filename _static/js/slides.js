@@ -568,7 +568,9 @@ function initialize() {
 }
 
 window.addEventListener("orientationchange", function () {
-  addGeneralStyle();
+  setTimeout(function () {
+    addGeneralStyle();
+  }, 500);
 }, false);
 
 // If ?debug exists then load the script relative instead of absolute
