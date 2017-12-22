@@ -568,7 +568,7 @@ function initialize() {
 }
 
 window.addEventListener("orientationchange", function () {
-  alert('change orientation');
+  addGeneralStyle();
 }, false);
 
 // If ?debug exists then load the script relative instead of absolute
