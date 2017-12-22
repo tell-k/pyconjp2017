@@ -81,10 +81,10 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 
-    border-radius: 1.5px;
-    -o-border-radius: 1.5px;
-    -moz-border-radius: 1.5px;
-    -webkit-border-radius: 1.5px;
+    border-radius: calc(100vw * 0.009);
+    -o-border-radius: calc(100vw * 0.009);
+    -moz-border-radius: calc(100vw * 0.009);
+    -webkit-border-radius: calc(100vw * 0.009);
 
     background-color: white;
 
