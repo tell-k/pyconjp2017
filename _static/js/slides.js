@@ -462,11 +462,11 @@ function addGeneralStyle() {
       width = 1100;
   }
 
-  // alert('screen width5');
-  // alert(screen.width);
-  // alert(screen.availWidth);
-  // alert(window.innerWidth);
-  // alert(document.documentElement.clientWidth);
+  alert('screen width test1');
+  alert(screen.width);
+  alert(screen.availwidth);
+  alert(window.innerwidth);
+  alert(document.documentElement.clientWidth);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
