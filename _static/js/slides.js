@@ -466,10 +466,10 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
-  alert(screen.width);
-  alert(screen.availWidth);
-  alert(window.innerWidth);
-  alert(document.documentElement.clientWidth);
+  // alert(screen.width);
+  // alert(screen.availWidth);
+  // alert(window.innerWidth);
+  // alert(document.documentElement.clientWidth);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
