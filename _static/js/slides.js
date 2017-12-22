@@ -467,14 +467,7 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
-  if (window.innerHeight > window.innerWidth) {
-     var width = screen.width;
-  } else {
-     var width = screen.height;
-  }
-
-  alert(screen.width);
-  alert(width);
+  var width = screen.width;
   if (screen.width > 1100) {
       width = 1100;
   }
