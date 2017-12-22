@@ -469,8 +469,11 @@ function addGeneralStyle() {
   fontsize = Math.floor(26 * ratio);
 
   alert(window.parent.screen.width);
+  alert(window.parent.screen.height);
   alert(screen.width);
+  alert(screen.height);
   alert(width);
+  alert(height);
 
   el.content = 'width=' + width + ',height=' + height;
   document.querySelector('head').appendChild(el);
