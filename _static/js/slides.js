@@ -467,7 +467,9 @@ function addGeneralStyle() {
   fontsize = Math.floor(26 * ratio);
 
   alert(screen.width);
-  alert(widow.innerWidth);
+  alert(screen.availWidth);
+  alert(window.innerWidth);
+  alert(document.documentElement.clientWidth);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
