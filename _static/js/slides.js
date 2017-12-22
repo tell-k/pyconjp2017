@@ -475,7 +475,7 @@ function addGeneralStyle() {
   alert(width);
   alert(height);
 
-  el.content = 'width=' + width + ',height=' + height;
+  el.content = 'width=' + width + 'px,height=' + height + 'px';
   document.querySelector('head').appendChild(el);
 
 
