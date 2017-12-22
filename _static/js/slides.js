@@ -458,10 +458,10 @@ function addGeneralStyle() {
 
 
   var width = screen.width;
+  width = width * 2;
   if (screen.width > 1100) {
       width = 1100;
   }
-  width = width * 2;
   ratio = width / 1100;
   height = Math.floor(width * 0.682);
   slideHeight = Math.floor(width * 0.636);
@@ -481,7 +481,8 @@ function addGeneralStyle() {
   css += ' body > div.section > div.section {\n ';
   css += '  font-size: ' + fontsize  + 'px !important;\n';
   css += '  height: ' + slideHeight  + 'px;\n';
-  css += '  width: ' + width + 'px;\n';
+  //css += '  width: ' + width + 'px;\n';
+  css += '  width: 100px;\n';
   css += '  margin-left: -' + Math.floor(width * 0.5) + 'px;\n';
   css += '  margin-top: -' + Math.floor(slideHeight * 0.5) + 'px;\n';
   css += ' }';
