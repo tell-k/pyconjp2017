@@ -468,10 +468,14 @@ function addGeneralStyle() {
   document.body.appendChild(el);
 
 
-  // if (window.outerWidth == 0 &&  window.orientation)  {
-
-  // }
-  alert(window.orientation);
+  var orien = window.orientation;
+  var width = 0;
+  if (window.outerWidth === 0 && Math.abs(orien) === 90)  {
+    width = screen.height;
+  } else {
+    width = screen.width;
+  }
+  //alert(window.orientation);
   //alert(screen.width);
   //alert(screen.availWidth);
   //alert(window.innerWidth);
@@ -480,7 +484,6 @@ function addGeneralStyle() {
   //alert(document.documentElement.clientWidth);
   //alert($(document).width());
 
-  var width = screen.width;
   if (screen.width > 1100) {
       width = 1100;
   }
