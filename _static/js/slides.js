@@ -458,7 +458,6 @@ function addGeneralStyle() {
 
 
   var width = screen.width;
-  width = width - 10;
   if (screen.width > 1100) {
       width = 1100;
   }
@@ -467,6 +466,7 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
+  alert('screen width');
   alert(screen.width);
   alert(screen.availWidth);
   alert(window.innerWidth);
