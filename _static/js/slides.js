@@ -477,6 +477,8 @@ function addGeneralStyle() {
       viewWidth = viewHeight + 1.467;
       slideWidth = Math.floor(viewWidth - (viewWidth * 0.1));
       slideHeight = Math.floor(slideWidth * 0.636);
+      slideWidth = viewWidth;
+      slideHeight = viewHeight;
       ratio = slideWidth / 1100;
       fontSize = Math.floor(26 * ratio);
       alert(viewHeight);
