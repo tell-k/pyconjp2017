@@ -468,6 +468,7 @@ function addGeneralStyle() {
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
+  alert(window.parent.screen.width);
   alert(screen.width);
   alert(width);
 
