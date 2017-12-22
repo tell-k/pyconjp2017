@@ -472,6 +472,9 @@ function addGeneralStyle() {
   } else {
      var width = screen.height;
   }
+
+  alert(screen.width);
+  alert(width);
   if (screen.width > 1100) {
       width = 1100;
   }
