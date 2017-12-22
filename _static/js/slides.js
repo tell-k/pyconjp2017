@@ -461,8 +461,9 @@ function addGeneralStyle() {
   if (screen.width > 1100) {
       width = 1100;
   }
+  height = Math.floor(width * 0.682);
 
-  alert('screen width test3');
+  alert('screen width test5');
   alert(screen.width);
   alert(screen.height);
 
@@ -470,7 +471,6 @@ function addGeneralStyle() {
   el.name = 'viewport';
   // el.content = 'width=' + width + ',initial-scale=1.0';
   el.content = 'width=' + width + ',height=' + height + ',initial-scale=1.0';
-        //
   document.querySelector('head').appendChild(el);
 
   if (width < 1100) {
