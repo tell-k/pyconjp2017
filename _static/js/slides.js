@@ -508,7 +508,7 @@ function addGeneralStyle() {
   el.name = 'apple-mobile-web-app-capable';
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
-  setTimeout(function(){ window.scrollTo(0,1); }, 1000);
+  setTimeout(function(){ window.scrollTo(0, 3000); }, 1000);
 
 };
 
