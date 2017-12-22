@@ -467,13 +467,18 @@ function addGeneralStyle() {
   el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
   document.body.appendChild(el);
 
-  alert(screen.width);
-  alert(screen.availWidth);
-  alert(window.innerWidth);
-  alert(window.outerWidth);
-  alert($(window).width());
-  alert(document.documentElement.clientWidth);
-  alert($(document).width());
+
+  // if (window.outerWidth == 0 &&  window.orientation)  {
+
+  // }
+  alert(window.orientation);
+  //alert(screen.width);
+  //alert(screen.availWidth);
+  //alert(window.innerWidth);
+  //alert(window.outerWidth);
+  //alert($(window).width());
+  //alert(document.documentElement.clientWidth);
+  //alert($(document).width());
 
   var width = screen.width;
   if (screen.width > 1100) {
