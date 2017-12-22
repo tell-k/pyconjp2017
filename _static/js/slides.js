@@ -457,19 +457,20 @@ function addGeneralStyle() {
   document.body.appendChild(el);
 
 
-  var width = window.innerWidth;
-  if (window.innerWidth > 1100) {
+  var width = screen.width;
+  if (screen.width > 1100) {
       width = 1100;
   }
+  width = width * 2;
   ratio = width / 1100;
   height = Math.floor(width * 0.682);
   slideHeight = Math.floor(width * 0.636);
   fontsize = Math.floor(26 * ratio);
 
-  // alert(screen.width);
-  // alert(screen.availWidth);
-  // alert(window.innerWidth);
-  // alert(document.documentElement.clientWidth);
+  alert(screen.width);
+  alert(screen.availWidth);
+  alert(window.innerWidth);
+  alert(document.documentElement.clientWidth);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
