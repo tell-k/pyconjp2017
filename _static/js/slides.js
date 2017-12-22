@@ -468,8 +468,9 @@ function addGeneralStyle() {
 
   var el = document.createElement('meta');
   el.name = 'viewport';
-  el.content = 'width=' + width + ',initial-scale=1.0';
-  // el.content = 'width=' + width + ',height=' + height;
+  // el.content = 'width=' + width + ',initial-scale=1.0';
+  el.content = 'width=' + width + ',height=' + height + ',initial-scale=1.0';
+        //
   document.querySelector('head').appendChild(el);
 
   if (width < 1100) {
