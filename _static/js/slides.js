@@ -462,11 +462,9 @@ function addGeneralStyle() {
       width = 1100;
   }
 
-  alert('screen width test1');
+  alert('screen width test2');
   alert(screen.width);
-  alert(screen.availwidth);
-  alert(window.innerwidth);
-  alert(document.documentElement.clientWidth);
+  alert(screen.height);
 
   var el = document.createElement('meta');
   el.name = 'viewport';
@@ -513,7 +511,7 @@ function addGeneralStyle() {
   el.name = 'apple-mobile-web-app-capable';
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
-  setTimeout(function(){ window.scrollTo(0, 3000); }, 1000);
+  // setTimeout(function(){ window.scrollTo(0, 3000); }, 1000);
 
 };
 
