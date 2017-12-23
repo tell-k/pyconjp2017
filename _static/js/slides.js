@@ -510,14 +510,13 @@ function addGeneralStyle() {
       'fontSize': fontSize
     }
   };
-
   sizes = getSizes();
 
   remove("meta-viewport");
   var el = document.createElement('meta');
   el.id = 'meta-viewport';
   el.name = 'viewport';
-  el.content = 'width=' + sizes.viewWidth + ',height=' + sizes.viewHeight + ',initial-scale=1.0';
+  el.content = 'width=' + sizes.viewWidth + ',height=' + sizes.viewHeight + ',initial-scale=1.0,minimum-scale=1.0,max-scale=1.0';
   document.querySelector('head').appendChild(el);
 
   var css = '@media screen {';
@@ -596,7 +595,7 @@ function initialize() {
 window.addEventListener("orientationchange", function () {
   setTimeout(function () {
     addGeneralStyle();
-  }, 500);
+  }, 300);
 }, false);
 
 // If ?debug exists then load the script relative instead of absolute
