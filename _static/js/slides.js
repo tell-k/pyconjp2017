@@ -87,7 +87,8 @@ classListProto.add = function (token) {
   if (checkTokenAndGetIndex(this, token) === -1) {
     this.push(token);
     this._updateClassName();
-  } };
+  }
+};
 classListProto.remove = function (token) {
   token += "";
   var index = checkTokenAndGetIndex(this, token);
@@ -449,106 +450,20 @@ function addFontStyle() {
   document.body.appendChild(el);
 };
 
-
-function remove(element_id) {
-  var element = document.getElementById(element_id);
-  if (element) {
-    element.outerHTML = "";
-    delete element;
-  }
-}
-
 function addGeneralStyle() {
-  remove("link-styles-css");
+
   var el = document.createElement('link');
-  el.id = 'link-styles-css';
   el.rel = 'stylesheet';
   el.type = 'text/css';
-  el.href = PERMANENT_URL_PREFIX + 'styles.css?' + Date.now();
+  el.href = PERMANENT_URL_PREFIX + 'styles.css';
   document.body.appendChild(el);
 
-  var getSizes = function () {
-    var orien = window.orientation;
-    var viewWidth = 0,
-        slideWidth = 0;
-
-    if (window.outerWidth === 0 && Math.abs(orien) === 90)  {
-      viewHeight = screen.width;
-      viewWidth = viewHeight * 1.467;
-      slideWidth = viewWidth * 0.9;
-      slideHeight = viewHeight * 0.9;
-      ratio = slideWidth / 1100;
-      fontSize = Math.floor(26 * ratio);
-      return {
-        'viewWidth': viewWidth,
-        'viewHeight': viewHeight,
-        'slideWidth': slideWidth,
-        'slideHeight': slideHeight,
-        'fontSize': fontSize
-      }
-      // viewWidth = screen.height;
-    } else {
-      viewWidth = screen.width;
-    }
-    var slideWidth = viewWidth;
-    if (screen.width > 1100) {
-        slideWidth = 1100;
-    }
-    viewHeight = Math.floor(slideWidth * 0.682);
-    if (slideWidth < 1100) {
-      slideWidth = Math.floor(slideWidth - (slideWidth * 0.1));
-    }
-    ratio = slideWidth / 1100;
-    slideHeight = Math.floor(slideWidth * 0.636);
-    fontSize = Math.floor(26 * ratio);
-
-    return {
-      'viewWidth': viewWidth,
-      'viewHeight': viewHeight,
-      'slideWidth': slideWidth,
-      'slideHeight': slideHeight,
-      'fontSize': fontSize
-    }
-  };
-  sizes = getSizes();
-
-  remove("meta-viewport");
   var el = document.createElement('meta');
-  el.id = 'meta-viewport';
   el.name = 'viewport';
-  el.content = 'width=' + sizes.viewWidth + ',height=' + sizes.viewHeight + ',initial-scale=1.0,minimum-scale=1.0,max-scale=1.0';
+  el.content = 'width=1100,height=750';
   document.querySelector('head').appendChild(el);
 
-  var css = '@media screen {';
-  css += ' body > div.section > div.section {\n ';
-  css += '  font-size: ' + sizes.fontSize  + 'px !important;\n';
-  css += '  height: ' + sizes.slideHeight  + 'px;\n';
-  css += '  width: ' + sizes.slideWidth + 'px;\n';
-  css += '  margin-left: -' + Math.floor(sizes.slideWidth * 0.5) + 'px;\n';
-  css += '  margin-top: -' + Math.floor(sizes.slideHeight * 0.5) + 'px;\n';
-  css += ' }';
-  css += ' .slide-area {';
-  css += '  width:' + Math.floor(sizes.slideWidth * 0.167) + 'px;';
-  css += '  height:' + Math.floor(sizes.slideHeight) + 'px;';
-  css += '  margin-top: -' + Math.floor(sizes.slideHeight * 0.5) + 'px;';
-  css += ' }';
-  css += '}';
-
-  remove("link-override-css");
-  var head = document.head || document.getElementsByTagName('head')[0];
-  var style = document.createElement('style');
-  style.id = 'link-override-css';
-  style.type = 'text/css';
-  if (style.styleSheet){
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-  head.appendChild(style);
-
-  remove("meta-app-capable");
   var el = document.createElement('meta');
-  el.id = 'meta-app-capable';
   el.name = 'apple-mobile-web-app-capable';
   el.content = 'yes';
   document.querySelector('head').appendChild(el);
@@ -558,23 +473,21 @@ function showHelpText() {
 };
 
 function handleDomLoaded() {
-  slideEls = document.querySelectorAll('body > div.section > div.section');
+  window.setTimeout(function() {
 
-  setupFrames();
+    slideEls = document.querySelectorAll('body > div.section > div.section');
+    setupFrames();
+    addFontStyle();
+    addGeneralStyle();
+    addEventListeners();
+    updateSlides();
+    setupInteraction();
+    if (window.location.hostname == "localhost" || window.location.hostname == "127.0.0.1" || window.location.hostname == "::1") {
+      hideHelpText();
+    }
+    document.body.classList.add('loaded');
 
-  addFontStyle();
-  addGeneralStyle();
-  addEventListeners();
-
-  updateSlides();
-
-  setupInteraction();
-
-  if (window.location.hostname == "localhost" || window.location.hostname == "127.0.0.1" || window.location.hostname == "::1") {
-    hideHelpText();
-  }
-
-  document.body.classList.add('loaded');
+  }, 1000);
 };
 
 function initialize() {
@@ -583,20 +496,12 @@ function initialize() {
   if (window['_DEBUG']) {
     PERMANENT_URL_PREFIX = '../';
   }
-
   if (window['_DCL']) {
     handleDomLoaded();
   } else {
-    handleDomLoaded();
-    // document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
+    document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
   }
 }
-
-window.addEventListener("orientationchange", function () {
-  setTimeout(function () {
-    addGeneralStyle();
-  }, 300);
-}, false);
 
 // If ?debug exists then load the script relative instead of absolute
 if (!window['_DEBUG'] && document.location.href.indexOf('?debug') !== -1) {
@@ -615,5 +520,5 @@ if (!window['_DEBUG'] && document.location.href.indexOf('?debug') !== -1) {
   // Remove this script
   s.parentNode.removeChild(s);
 } else {
-   setTimeout(initialize, 1000);
+  initialize();
 }

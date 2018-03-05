@@ -1,235 +1,290 @@
-==================
 参考
-==================
+============
 
-.. contents::
-   :local:
+ASCII.jp：Go言語と並列処理｜Goならわかるシステムプログラミング
+ http://ascii.jp/elem/000/001/475/1475360/
 
-URL
------------------
+python3.4/3.5のasyncioが何となく不満。 - BlankTar
+ http://blanktar.jp/blog/2015/07/python3.5-asyncio.html
 
+Python3.4 の新機能 asyncio を使ってみる - Cybozu Inside Out | サイボウズエンジニアのブログ
+ http://blog.cybozu.io/entry/8822
 
-Python 3 Patterns, Recipes and Idioms > Metaprogramming
- http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
+Emerge Technology: [翻訳] geventのeventletとの比較
+ http://blog.liris.org/2010/04/geventeventlet.html
 
-Pythonによる黒魔術入門
- http://www.slideshare.net/ssuser38b704/ll-lang-blackmagic
+I/Oを多重化するためのシステムコール(select, poll, epoll, kqueue) - $shibayu36->blog;
+ http://blog.shibayu36.org/entry/20120101/1325418188
 
-Python の メタプログラミング (__metaclass__, メタクラス) を理解する
- http://www.yunabe.jp/docs/python_metaclass.html
+ノンブロッキングI/Oと非同期I/Oの違いを理解する – PAYFORWARD
+ http://blog.takanabe.tokyo/2015/03/26/240/
 
-Pythonのメタクラスについて
- http://aodag.bitbucket.org/meta_class.html
+2015年Webサーバアーキテクチャ序論 - ゆううきブログ
+ http://blog.yuuk.io/entry/2015-webserver-architecture
 
-Python Webフレームワーク作ってみた
- http://blog.aodag.jp/2010/12/python-web.html
+どこまで速くできる？ 達人に学ぶPython超高速データ分析～PyData.Tokyo Meetup #4イベントレポート (1/3)：CodeZine（コードジン）
+ https://codezine.jp/article/detail/8687
 
-Django のモデルとフィールドのクラス変数について
- http://atas.hatenablog.jp/entry/2016/04/21/203242
+Node.jsと非同期I/Oと混乱した私 - shutdown -r now
+ http://d.hatena.ne.jp/forest1040/20110407/1302150936
 
-[python]メタプログラミングの基礎(__init__, __new__, __metaclass__)
- http://dackdive.hateblo.jp/entry/2015/08/02/100000
+Pythonで__slots__を使ってメモリを節約 - 西尾泰和のはてなダイアリー
+ http://d.hatena.ne.jp/nishiohirokazu/20121016/1350381252
 
-[Python] メタクラスをたおした
- http://note.crohaco.net/2016/python-metaclass/
+pythonで単一プロセス内でマルチスレッドを実行しても対して速くならない... - Yahoo!知恵袋
+ http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11114864466
 
-メタクラスと継承の違いについて教えてください
- http://ja.stackoverflow.com/a/16605
+async await の仕組みについて、 yield from から await へと見ていく.ipynb · GitHub
+ https://gist.github.com/nakamuray/13be3471ebed1e6845f2a3499e7e9575
 
-Python Cookbook > Chapter 9. Metaprogramming
- http://chimera.labs.oreilly.com/books/1230000000393/ch09.html
+GitHub - c-bata/concurrency-in-python: 神戸Pythonの会 ハンズオン資料
+ https://github.com/c-bata/concurrency-in-python
 
-Python とマクロ、インポートフックと抽象構文木
- http://t2y.hatenablog.jp/entry/2015/03/11/025123
+プロセス、スレッド、ファイバ、タスク、ジョブ、違いを整理してみよう - Schi Heil と叫ぶために
+ http://hiroakiuno.hatenablog.com/entry/20070316/p1
 
-Python を支える技術 ディスクリプタ編 #pyconjp
- http://qiita.com/knzm/items/a8a0fead6e1706663c22
+グローバルインタプリタロック(GIL)とは
+ http://hivecolor.com/id/162
 
-Python のディスクリプターの紹介
- https://www.ibm.com/developerworks/jp/opensource/library/os-pythondescriptors/
+NumPyから最高のパフォーマンスを得る方法 - keisukeのブログ
+ http://kaisk.hatenadiary.com/entry/2015/02/19/224531
 
-メタプログラミング
- https://ja.wikipedia.org/wiki/メタプログラミング
+node.jsを支えるlibuvのチュートリアル"uvbook" :イントロダクション - 自由課題
+ http://kimitok.hateblo.jp/entry/2014/03/30/184849
 
-Pythonのデコレータを理解するときに残したメモ
- http://kk6.hateblo.jp/entry/20120616/1339803112
+I don't understand Python's Asyncio | Armin Ronacher's Thoughts and Writings
+ http://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/
 
-Python 3 Metaprogramming
- http://www.dabeaz.com/py3meta/Py3Meta.pdf
+pyuvと戯れる - Keep on moving
+ http://masahito.hatenablog.com/entry/20111225/1324829078
 
-Descriptor HowTo Guide
- https://docs.python.org/3/howto/descriptor.html
+Python asyncio: Future, Task and the Event Loop | Abu Ashraf Masnun
+ http://masnun.com/2015/11/20/python-asyncio-future-task-and-the-event-loop.html
 
-Metaprogramming Beyond Decency: Part 1
- http://hackflow.com/blog/2015/03/29/metaprogramming-beyond-decency/
+Gevent チュートリアル
+ http://methane.github.io/gevent-tutorial-ja/
 
-Meta Programming - Some Use Cases for Everyday Programming
- https://ep2013.europython.eu/media/conference/slides/meta-programming-some-use-cases-for-everyday-programming.pdf
+Gevent
+ http://methane.github.io/pyconjp2012-gevent-slide/#slide45
 
-好きな言葉「必要かどうか悩むようなものは必要ない」
- http://d.hatena.ne.jp/nishiohirokazu/20090213/1234477277
+Python の threading.Thread を試してみる | CUBE SUGAR STORAGE
+ http://momijiame.tumblr.com/post/38149309923/python-%E3%81%AE-threadingthread-%E3%82%92%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B
 
-METAPROGRAMMING PYTHON FOR BIG DATA
- https://tuulos.github.io/sf-python-meetup-sep-2013/#/18
+Pythonにおける並行処理プログラミング入門 - MyEnigma
+ http://myenigma.hatenablog.com/entry/2016/04/09/184215
 
-srossross/Meta
- https://github.com/srossross/Meta
+libeventとは - NeiNeigh's blog
+ http://neineigh.hatenablog.com/entry/2013/09/14/204723
 
-Python 3 Metaprogramming
- https://us.pycon.org/2013/schedule/presentation/7/
+Pythonで少なくメモリを使用する方法 - のんびりしているエンジニアの日記
+ http://nonbiri-tereka.hatenablog.com/entry/2016/01/03/230429
 
-More on Python Metaprogramming
- http://www.ianbicking.org/more-on-python-metaprogramming.html
+asyncioを用いたpythonの高速なスクレイピング | プログラミング | POSTD
+ http://postd.cc/fast-scraping-in-python-with-asyncio/
 
-Fantastic DSL in Python
- http://www.slideshare.net/kwatch/fantastic-dsl-in-python
+イベントループなしでのハイパフォーマンス – C10K問題へのGoの回答 | プログラミング | POSTD
+ http://postd.cc/performance-without-the-event-loop/
 
-PythonはDSLが苦手？
- http://atsuoishimoto.hatenablog.com/entry/20120821/1345537686
+Pythonのジェネレータ、コルーチン、ネイティブコルーチン、そしてasync/await | プログラミング | POSTD
+ http://postd.cc/python-generators-coroutines-native-coroutines-and-async-await/
 
-Dynamic Language Features and Meta-Programming Used in Django
- http://stackoverflow.com/questions/984272/dynamic-language-features-and-meta-programming-used-in-django
+Pythonや機械学習、そして言語の競争について – 極めて主観的な見地から | コンピュータサイエンス | POSTD
+ http://postd.cc/python-machine-learning-and-language-wars-a-highly-subjective-point-of-view/
 
-Python の黒魔術
- http://d.hatena.ne.jp/cocoatomo/20100322/1269270100
+開発者がビッグデータ分析にPythonを使う時によくやる間違い | プログラミング | POSTD
+ http://postd.cc/top-mistakes-python-big-data-analytics/
 
-Can you monkey patch methods on core types in python?
- http://stackoverflow.com/questions/192649/can-you-monkey-patch-methods-on-core-types-in-python
+Awesome Python：素晴らしい Python フレームワーク・ライブラリ・ソフトウェア・リソースの数々 - Qiita
+ http://qiita.com/h_network21/items/34c91d4ee0b54bd7cb8b
 
-インスタンスメソッド・クラスメソッド・スタティックメソッド
- http://d.hatena.ne.jp/kiwamu_i/20130401/1364821445
+PythonとJythonにおけるマルチスレッド処理の違い - Qiita
+ http://qiita.com/hashiwa/items/ce4df4f2ee1bbd1458bc
 
-built-in object を拡張する禁断の果実を齧ろう
- http://qiita.com/youhei/items/7502d161aecdd59030b9
+libev まとめ - Qiita
+ http://qiita.com/janus_wel/items/51bbd7517ab237a0b65c
 
-Pythonによるメタプログラミング
- http://ll.jus.or.jp/2011/slide/MetaProgramming/moriyoshi-20110821.pdf
+マルチスレッド/プロセスまとめ（Ruby編） - Qiita
+ http://qiita.com/masashi127/items/b186bbf20b4c9632cc86
 
-Fantastic DSL in Python
- http://www.slideshare.net/kwatch/fantastic-dsl-in-python
+お探しのページは見つかりません。(404: Not Found) - Qiita
+ http://qiita.com/tnarihi/items/a0dfb43fa989c3c8fc55
 
-collections.pyのnamedtupleが凄いの話
- http://tell-k.hatenablog.com/entry/2012/10/04/005308
+Python3.5のasync/awaitを使ってスクレイピング - Qiita
+ http://qiita.com/yasunori/items/03229bfa161e6dc2ea61
 
-Pythonでのメタクラス・プログラミング
- https://www.ibm.com/developerworks/jp/linux/library/l-pymeta/
+雨の中、Cを書かずにPythonで並列計算をする人間がいてもいい。自由とはそういうものだ。 - Qiita
+ http://qiita.com/yubais/items/5a9d91fe03fe715b21d0
 
-FlaskのViewのメタプログラミングの例がわかりやすかった。
- http://blog.kzfmix.com/entry/1362046113
+Pythonのメモリ使用量を減らすポイント - Qiita
+ http://qiita.com/yukinoi/items/59d43a3ee207c8aad35b
 
-Pythonのメタプログラミング (メタクラス) を理解したい人のための短いコード片と禅問答
- http://coreblog.org/ats/lerning-metaclass-by-reading-javascript-like-prototype-in-python/
+Python 3.6 Release Party async 関連 // Speaker Deck
+ https://speakerdeck.com/t2y/python-3-dot-6-release-party-async-guan-lian
 
-Python de「メタプログラミング」
- https://teratail.com/questions/42169
+multithreading - Multiprocessing vs Threading Python - Stack Overflow
+ http://stackoverflow.com/questions/3044580/multiprocessing-vs-threading-python
 
-メタプログラミング
- http://fixxman.hatenablog.com/entry/2014/11/24/171706
+python で同期的なコードの中で asyncio な処理を実行したい - memo
+ http://u7fa9.org/memo/HEAD/archives/2016-01/2016-01-27.rst
 
-第1回　メタプログラミングの光と闇
- http://gihyo.jp/dev/serial/01/llplanets/0001
+Background tasks in Python 3.5 | Curious Efficiency
+ http://www.curiousefficiency.org/posts/2015/07/asyncio-background-calls.html
 
-マクロを便利に使う
- http://tyano.shelfinc.com/post/75677779961/マクロを便利に使う
+Interactive Python Thread Visualization [dabeaz]
+ http://www.dabeaz.com/GIL/gilvis/
 
-メタプログラミングの光と闇
- http://ll.jus.or.jp/2011/program/metaprogramming.html
+Unknown Title
+ http://www.dabeaz.com/python/GIL.pdf
 
-LL TigerのLTでRuby on Python(仮)の発表してきました。
- http://blog.shibu.jp/article/39920783.html
+Exploring Python 3’s Asyncio by Example | Giant Flying Saucer
+ http://www.giantflyingsaucer.com/blog/?p=5557
 
-数々の“スペル”で高度なプログラミング
- http://www.atmarkit.co.jp/news/201009/13/spell.html
+動的言語総まとめ : PythonのGILが徹底改善されるも廃止はされない。SqueakがAndroidに移植された。
+ https://www.infoq.com/jp/news/2010/01/new-python-gil-squeak-on-android
 
-特異クラス
- https://gist.github.com/sunaot/8682795
+PEP 380 -- Syntax for Delegating to a Subgenerator | Python.org
+ https://www.python.org/dev/peps/pep-0380/
 
-Ruby、Pythonで動的ディスパッチ/動的メソッド定義
- http://y0m0r.hateblo.jp/entry/20120116/1326715412
+PEP 492 -- Coroutines with async and await syntax | Python.org
+ https://www.python.org/dev/peps/pep-0492/
 
-クラスマクロ
- http://qiita.com/mr-myself/items/b4f44a908ce6a190b81d#2-4
+PEP 3153 -- Asynchronous IO support | Python.org
+ https://www.python.org/dev/peps/pep-3153/
 
-JavaScriptガイド > メタプログラミング
- https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Meta_programming
+PEP 3156 -- Asynchronous IO Support Rebooted: the "asyncio" Module | Python.org
+ https://www.python.org/dev/peps/pep-3156/
 
-メタプログラミングをして割に合うかの判断基準：処理を1箇所に局所化できる
- http://www.clear-code.com/blog/2014/1/16.html
+Pythonによる非同期プログラミング入門
+ http://www.slideshare.net/checkpoint77/python-39105106
 
-モンキーパッチ
- https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%B3%E3%82%AD%E3%83%BC%E3%83%91%E3%83%83%E3%83%81
+[Python] マルチプロセスな処理を実装して、処理を高速化する - YoheiM .NET
+ http://www.yoheim.net/blog.php?q=20170601
 
-Railsによるメタプログラミング入門
- https://shugo.net/tmp/metaprogramming.pdf
+PANDAS RELEASING THE GIL
+ https://www.continuum.io/content/pandas-releasing-gil
 
-python の型とクラスの関係
- http://pydiary.bitbucket.org/blog/html/2013/10/12/type.html
 
-結局、Rubyの特異メソッドって何なの？
- http://blog.livedoor.jp/sasata299/archives/51497378.html
+今さらPython3 (72) - 並行処理 multiprocessing vs threading - Deutschina's Tech Diary
+ http://deutschina.hatenablog.com/entry/2016/02/18/013000
 
-Python: 特殊メソッド __getattr__() を使う際の注意点
- http://blog.amedama.jp/entry/2016/01/03/225802
 
-今までに書いたPythonの黒魔術っぽいコーディングについての記事まとめ
- http://hachibeechan.hateblo.jp/entry/summary-of-my-article-about-python
+今さらPython3 (72) - 並行処理 multiprocessing vs threading - Deutschina's Tech Diary
+ http://deutschina.hatenablog.com/entry/2016/02/18/013000
 
-ctypes ~pythonでCをイジる(Macで)~
- http://curlnoodle.hatenablog.com/entry/2013/12/30/221858
 
-PyPatt - Python Pattern Matching
- http://www.grantjenks.com/docs/pypatt-python-pattern-matching/index.html
+scikit learn - Imputer on some Dataframe columns in Python - Stack Overflow
+ https://stackoverflow.com/questions/38584184/imputer-on-some-dataframe-columns-in-python
 
-Using the AST to hack constants into Python
- http://blaag.haard.se/Using-the-AST-to-hack-constants-into-Python/
 
-Python ast.NodeTransformer Examples
- http://www.programcreek.com/python/example/71620/ast.NodeTransformer
+魅力的なPython: Pythonジェネレーターで「無重量スレッド」を実装する
+ https://www.ibm.com/developerworks/jp/linux/library/l-pythrd/index.html
 
-Python internals: Working with Python ASTs
- http://eli.thegreenplace.net/2009/11/28/python-internals-working-with-python-asts/
 
-Pythonのオブジェクトとクラスのビジュアルガイド – 全てがオブジェクトであるということ
- http://postd.cc/pythons-objects-and-classes-a-visual-guide/
+Blog Alpha Networking: Cのselect、epollを使ったI/O多重化
+ http://alpha-netzilla.blogspot.jp/2017/01/io-multiplexing.html
 
-Pythonでメソッドをクラスまたはインスタンスに動的に追加する
- https://www.ianlewis.org/jp/python-add-class-method
 
-Lisp プログラマのための Python 入門
- http://www.unixuser.org/~euske/doc/python/python-lisp-j.html
+GitHub - libuv/libuv: Cross-platform asynchronous I/O
+ https://github.com/libuv/libuv
 
-srcgenが何かに使えそうだと思っているのだけれど。どうしたら便利なのかという答えは出ていない
- http://pod.hatenablog.com/entry/2015/02/15/001641
 
-zopefoundation/zope.proxy
- https://github.com/zopefoundation/zope.proxy/
+Emerge Technology: [翻訳] geventのeventletとの比較
+ http://blog.liris.org/2010/04/geventeventlet.html
 
-動画
-----------
 
-Python Metaprogramming for Mad Scientists and Evil Geniuses
- https://www.on/zope.proxy/youtube.com/watch?v=Adr_QuDZxuM
+Blog Alpha Networking: Cのselect、epollを使ったI/O多重化
+ http://alpha-netzilla.blogspot.jp/2017/01/io-multiplexing.html
 
-Introduction to Metaclasses
- https://www.youtube.com/watch?v=ANhTacigaf8
 
-メタプログラミングの光と闇
- https://vimeo.com/27958531
+非同期とノンブロッキングとあと何か | κeenのHappy Hacκing Blog
+ http://keens.github.io/blog/2017/05/19/hidoukitononburokkingutoatonanika/
 
-書籍
-------------
+非同期ＩＯ周りの話 - Togetter
+ https://togetter.com/li/136290
 
-メタプログラミングRuby 第2版
- https://www.oreilly.co.jp/books/9784873117430/
+何とかなるかも
+ http://d.hatena.ne.jp/masu_mi/20121124/1353780953
 
-エキスパートPythonプログラミング
- https://www.amazon.co.jp/dp/4048686291
+CPythonのgrennlet(グリーンスレッド)の実装について - mfumiの日記
+ http://d.hatena.ne.jp/mFumi/20140429/1398781151
 
-Effective Python
- https://www.oreilly.co.jp/books/9784873117560/
+CPythonのgrennlet(グリーンスレッド)の実装について - mfumiの日記
+ http://d.hatena.ne.jp/mFumi/20140429/1398781151
 
-Python 文法詳解
- https://www.oreilly.co.jp/books/9784873116884/
+Python3.5で実装されたasync/awaitを使って軽量スレッドの性能ベンチマーク - Qiita
+ http://qiita.com/haminiku/items/0aaf87e9a52ed41b60a7
 
-パーフェクトPython
- https://www.amazon.co.jp/dp/477415539X
+python の asyncio について調べる - memo
+ https://u7fa9.org/memo/HEAD/archives/2016-05/2016-05-29.rst
+
+Pythonでconcurrent.futuresを使った並列タスク実行 - Qiita
+ http://qiita.com/tag1216/items/db5adcf1ddcb67cfefc8
+
+ネットワークプログラムのI/O戦略 - sdyuki-devel
+ http://d.hatena.ne.jp/sdyuki/20090624/1245845216
+
+Python: ソケットプログラミングのアーキテクチャパターン - CUBE SUGAR CONTAINER
+ http://blog.amedama.jp/entry/2017/03/29/080000
+
+Node.jsと非同期I/Oと混乱した私 - shutdown -r now
+ http://d.hatena.ne.jp/forest1040/20110407/1302150936
+
+Pythonの非同期通信（asyncioモジュール）入門を書きました - ゆくゆくは有へと
+ http://iuk.hateblo.jp/entry/2017/01/27/173449#f-95341427
+
+node.jsを支えるlibuvのチュートリアル"uvbook" :基礎 - 自由課題
+ http://kimitok.hateblo.jp/entry/2014/03/30/185544
+
+node.jsを支えるlibuvのチュートリアル"uvbook" :イントロダクション - 自由課題
+ http://kimitok.hateblo.jp/entry/2014/03/30/184849
+
+Node.jsのイベントループを理解する | プログラミング | POSTD
+ http://postd.cc/understanding-the-nodejs-event-loop/
+
+Perl 非同期プログラミング
+ https://www.slideshare.net/lestrrat/perl-4925529
+
+GitHub - AndreLouisCaron/a-tale-of-event-loops: Notes describing my understanding of how modern Python event loops work
+ https://github.com/AndreLouisCaron/a-tale-of-event-loops
+
+Frequently Asked Questions — PyPy documentation
+ http://doc.pypy.org/en/latest/faq.html#does-pypy-have-a-gil-why
+
+18.5.3. タスクとコルーチン — Python 3.6.4 ドキュメント
+ https://docs.python.org/ja/3/library/asyncio-task.html
+
+Pythonによる非同期プログラミング入門
+ https://www.slideshare.net/checkpoint77/python-39105106
+
+Why use asyncio? — Asyncio Documentation 0.0 documentation
+ http://asyncio.readthedocs.io/en/latest/why_asyncio.html
+
+次世代標準非同期I/Oフレームワーク asyncio (Tulip) - methaneのブログ
+ http://methane.hatenablog.jp/entry/2013/12/04/%E6%AC%A1%E4%B8%96%E4%BB%A3%E6%A8%99%E6%BA%96%E9%9D%9E%E5%90%8C%E6%9C%9FI/O%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF_asyncio_%28Tulip%29
+
+何とかなるかも
+ http://d.hatena.ne.jp/masu_mi/20121124/1353780953
+
+greenlet: Lightweight concurrent programming — greenlet 0.4.0 documentation
+ https://greenlet.readthedocs.io/en/latest/
+
+UV - libuv binding for Perl - SSSSLIDE
+ http://sssslide.com/speakerdeck.com/typester/uv-libuv-binding-for-perl
+
+何とかなるかも
+ http://d.hatena.ne.jp/masu_mi/20121124/1353780953
+
+Welcome to pyuv’s documentation! — pyuv 1.4.0 documentation
+ https://pyuv.readthedocs.io/en/v1.x/
+
+libeioのサンプルコード - shutdown -r now
+ http://d.hatena.ne.jp/forest1040/20110407/1302153250
+
+Gevent チュートリアル
+ http://methane.github.io/gevent-tutorial-ja/
+
+Coroが何故重要であるか - 金利0無利息キャッシング – キャッシングできます - subtech
+ https://subtech.g.hatena.ne.jp/mala/20090916/1253113140
+
+asyncioのloopをどうするかということについて考えてみた - podhmo's diary
+ http://pod.hatenablog.com/entry/2016/06/16/024151
