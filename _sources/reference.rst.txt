@@ -271,9 +271,6 @@ greenlet: Lightweight concurrent programming — greenlet 0.4.0 documentation
 UV - libuv binding for Perl - SSSSLIDE
  http://sssslide.com/speakerdeck.com/typester/uv-libuv-binding-for-perl
 
-何とかなるかも
- http://d.hatena.ne.jp/masu_mi/20121124/1353780953
-
 Welcome to pyuv’s documentation! — pyuv 1.4.0 documentation
  https://pyuv.readthedocs.io/en/v1.x/
 

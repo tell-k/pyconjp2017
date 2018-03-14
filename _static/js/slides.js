@@ -451,7 +451,6 @@ function addFontStyle() {
 };
 
 function addGeneralStyle() {
-
   var el = document.createElement('link');
   el.rel = 'stylesheet';
   el.type = 'text/css';
@@ -473,21 +472,23 @@ function showHelpText() {
 };
 
 function handleDomLoaded() {
-  window.setTimeout(function() {
+  slideEls = document.querySelectorAll('body > div.section > div.section');
 
-    slideEls = document.querySelectorAll('body > div.section > div.section');
-    setupFrames();
-    addFontStyle();
-    addGeneralStyle();
-    addEventListeners();
-    updateSlides();
-    setupInteraction();
-    if (window.location.hostname == "localhost" || window.location.hostname == "127.0.0.1" || window.location.hostname == "::1") {
-      hideHelpText();
-    }
-    document.body.classList.add('loaded');
+  setupFrames();
 
-  }, 1000);
+  addFontStyle();
+  addGeneralStyle();
+  addEventListeners();
+
+  updateSlides();
+
+  setupInteraction();
+
+  if (window.location.hostname == "localhost" || window.location.hostname == "127.0.0.1" || window.location.hostname == "::1") {
+    hideHelpText();
+  }
+
+  document.body.classList.add('loaded');
 };
 
 function initialize() {
@@ -496,10 +497,12 @@ function initialize() {
   if (window['_DEBUG']) {
     PERMANENT_URL_PREFIX = '../';
   }
+
   if (window['_DCL']) {
     handleDomLoaded();
   } else {
-    document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
+    handleDomLoaded();
+    // document.addEventListener('DOMContentLoaded', handleDomLoaded, false);
   }
 }
 
@@ -520,5 +523,5 @@ if (!window['_DEBUG'] && document.location.href.indexOf('?debug') !== -1) {
   // Remove this script
   s.parentNode.removeChild(s);
 } else {
-  initialize();
+   setTimeout(initialize, 1000);
 }

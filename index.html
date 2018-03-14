@@ -30,14 +30,14 @@
 </div>
 <div class="section" id="beproud-inc-connpass">
 <h2>Beproud.inc - connpass<a class="headerlink" href="#beproud-inc-connpass" title="Permalink to this headline">¶</a></h2>
-<div class="figure" id="id42">
+<div class="figure" id="id43">
 <img alt="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/okbyv2hm.png" src="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/okbyv2hm.png" />
 <p class="caption"><span class="caption-text"><a class="reference external" href="http://connpass.com/">http://connpass.com/</a></span></p>
 </div>
 </div>
 <div class="section" id="pyq-python">
 <h2>PyQ - Pythonオンライン学習サービス<a class="headerlink" href="#pyq-python" title="Permalink to this headline">¶</a></h2>
-<div class="figure" id="id43">
+<div class="figure" id="id44">
 <a class="reference internal image-reference" href="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png"><img alt="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png" src="https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/4d694a2da10c437fa0a4b69901f9d754.png" style="width: 80%;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://pyq.jp/">https://pyq.jp/</a></span></p>
 </div>
@@ -109,8 +109,8 @@
 <div class="section" id="id8">
 <h2>並行/並列処理とは?<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>並行(<code class="docutils literal notranslate"><span class="pre">concurrent</span></code>)と並列(<code class="docutils literal notranslate"><span class="pre">parallel</span></code>)という似た用語がある</li>
-<li><code class="docutils literal notranslate"><span class="pre">同義</span></code> として使われることも多い</li>
+<li>並行(<code class="docutils literal"><span class="pre">concurrent</span></code>)と並列(<code class="docutils literal"><span class="pre">parallel</span></code>)という似た用語がある</li>
+<li><code class="docutils literal"><span class="pre">同義</span></code> として使われることも多い</li>
 <li>一体どう違うんでしょうか？</li>
 </ul>
 </div>
@@ -118,14 +118,14 @@
 <h2>並行/並列処理とは?<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>ここでは <a class="reference external" href="https://www.amazon.co.jp/dp/4873114357">並列コンピューティング技法</a> より定義を拝借</li>
-<li>システムが複数の動作を <code class="docutils literal notranslate"><span class="pre">実行状態に保てる</span></code> ことを並行(<code class="docutils literal notranslate"><span class="pre">concurrent</span></code>)と呼ぶ</li>
-<li>複数の動作を <code class="docutils literal notranslate"><span class="pre">同時に実行できる</span></code> ことを並列(<code class="docutils literal notranslate"><span class="pre">parallel</span></code>)と呼ぶ</li>
-<li>並行 は 並列を <code class="docutils literal notranslate"><span class="pre">包含</span></code> する概念である</li>
+<li>システムが複数の動作を <code class="docutils literal"><span class="pre">実行状態に保てる</span></code> ことを並行(<code class="docutils literal"><span class="pre">concurrent</span></code>)と呼ぶ</li>
+<li>複数の動作を <code class="docutils literal"><span class="pre">同時に実行できる</span></code> ことを並列(<code class="docutils literal"><span class="pre">parallel</span></code>)と呼ぶ</li>
+<li>並行 は 並列を <code class="docutils literal"><span class="pre">包含</span></code> する概念である</li>
 </ul>
 <p>雑に言うと</p>
 <ul class="simple">
-<li>本当に複数の処理を同時に実行するのが -&gt; <code class="docutils literal notranslate"><span class="pre">並列処理</span></code></li>
-<li>複数処理を効率良く切り替えながらあたかも同時に実行するのが -&gt; <code class="docutils literal notranslate"><span class="pre">並行処理</span></code></li>
+<li>本当に複数の処理を同時に実行するのが -&gt; <code class="docutils literal"><span class="pre">並列処理</span></code></li>
+<li>複数処理を効率良く切り替えながらあたかも同時に実行するのが -&gt; <code class="docutils literal"><span class="pre">並行処理</span></code></li>
 </ul>
 </div>
 <div class="section" id="id11">
@@ -139,8 +139,8 @@
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>数値計算のようにCPUを使い続けるような処理 … <code class="docutils literal notranslate"><span class="pre">CPUバウンド</span></code></li>
-<li>ファイルの読み書き、DBへの接続、ネットワーク通信 … <code class="docutils literal notranslate"><span class="pre">I/Oバウンド</span></code></li>
+<li>数値計算のようにCPUを使い続けるような処理 … <code class="docutils literal"><span class="pre">CPUバウンド</span></code></li>
+<li>ファイルの読み書き、DBへの接続、ネットワーク通信 … <code class="docutils literal"><span class="pre">I/Oバウンド</span></code></li>
 </ul>
 </div></blockquote>
 <ul class="simple">
@@ -161,8 +161,8 @@
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>マルチスレッドを扱う <code class="docutils literal notranslate"><span class="pre">ThreadPoolExecuter</span></code></li>
-<li>マルチプロセスを扱う <code class="docutils literal notranslate"><span class="pre">ProcessPoolExecuter</span></code></li>
+<li>マルチスレッドを扱う <code class="docutils literal"><span class="pre">ThreadPoolExecuter</span></code></li>
+<li>マルチプロセスを扱う <code class="docutils literal"><span class="pre">ProcessPoolExecuter</span></code></li>
 </ul>
 </div></blockquote>
 </div>
@@ -182,7 +182,7 @@
 </div>
 <div class="section" id="threadpoolexecuter-i-o">
 <h2>ThreadPoolExecuter - I/Oバウンドの例<a class="headerlink" href="#threadpoolexecuter-i-o" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -228,11 +228,11 @@
 <h2>ThreadPoolExecuter - I/Oバウンドの例<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <p>実行するとどうなるか?</p>
 <ul class="simple">
-<li>巨大なファイルを読み込んでる <code class="docutils literal notranslate"><span class="pre">I/O待ち</span></code> が発生する</li>
+<li>巨大なファイルを読み込んでる <code class="docutils literal"><span class="pre">I/O待ち</span></code> が発生する</li>
 <li>I/O待ちが発生すると、別のスレッドの処理が実行される</li>
 <li>結果、ほぼ同時に3つのファイル読み込み処理が開始</li>
 <li>ワーカースレッドに空きができたら、未処理のタスクを実行する</li>
-<li>逐次処理で6回読む込みよりも <code class="docutils literal notranslate"><span class="pre">処理速度はかなり速くなる</span></code></li>
+<li>逐次処理で6回読む込みよりも <code class="docutils literal"><span class="pre">処理速度はかなり速くなる</span></code></li>
 </ul>
 </div>
 <div class="section" id="id15">
@@ -242,7 +242,7 @@
 <div class="section" id="threadpoolexecuter-cpu">
 <h2>ThreadPoolExecuter - CPUバウンドの例<a class="headerlink" href="#threadpoolexecuter-cpu" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>次に同じThreadPoolExecuterで <code class="docutils literal notranslate"><span class="pre">CPUバウンドな処理</span></code> を実行してみましょう</li>
+<li>次に同じThreadPoolExecuterで <code class="docutils literal"><span class="pre">CPUバウンドな処理</span></code> を実行してみましょう</li>
 </ul>
 <p>例えば</p>
 <ul class="simple">
@@ -253,7 +253,7 @@
 </div>
 <div class="section" id="id16">
 <h2>ThreadPoolExecuter - CPUバウンドの例<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -301,11 +301,11 @@
 </ul>
 <p>なぜ？</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">GIL</span></code> という仕組みにより、実行されるスレッドは <code class="docutils literal notranslate"><span class="pre">常に一つ</span></code> に制限されている</li>
+<li><code class="docutils literal"><span class="pre">GIL</span></code> という仕組みにより、実行されるスレッドは <code class="docutils literal"><span class="pre">常に一つ</span></code> に制限されている</li>
 </ul>
 <p>結果的に</p>
 <ul class="simple">
-<li>逐次処理で実行するのと、ほぼ <code class="docutils literal notranslate"><span class="pre">処理時間は変わらない</span></code></li>
+<li>逐次処理で実行するのと、ほぼ <code class="docutils literal"><span class="pre">処理時間は変わらない</span></code></li>
 <li>つまりCPUバウンドな処理をマルチスレッドにしてもあまり嬉しくない</li>
 </ul>
 </div>
@@ -316,8 +316,8 @@
 <div class="section" id="gil">
 <h2>GILとは？<a class="headerlink" href="#gil" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Global</span> <span class="pre">Interpretor</span> <span class="pre">Lock</span></code> の 略称</li>
-<li>Pythonのコードを実行できるスレッドは <code class="docutils literal notranslate"><span class="pre">常に一つのみ</span></code> という制限</li>
+<li><code class="docutils literal"><span class="pre">Global</span> <span class="pre">Interpretor</span> <span class="pre">Lock</span></code> の 略称</li>
+<li>Pythonのコードを実行できるスレッドは <code class="docutils literal"><span class="pre">常に一つのみ</span></code> という制限</li>
 </ul>
 <p>なぜ制限あるのか？</p>
 <ul class="simple">
@@ -326,7 +326,7 @@
 </ul>
 <p>ちなみに</p>
 <ul class="simple">
-<li>I/O処理や、一部のC拡張モジュールなどでは <code class="docutils literal notranslate"><span class="pre">GILが解放される</span></code> らしいです</li>
+<li>I/O処理や、一部のC拡張モジュールなどでは <code class="docutils literal"><span class="pre">GILが解放される</span></code> らしいです</li>
 <li><a class="reference external" href="https://docs.python.org/ja/3/glossary.html#term-global-interpreter-lock">用語集 &gt; global interpreter lock</a></li>
 <li><a class="reference external" href="http://methane.hatenablog.jp/entry/20111203/1322900647">Python3 Advent Calender 3日目 - New GIL を理解する</a></li>
 </ul>
@@ -337,7 +337,7 @@
 <li>解放の仕方はドキュメントに書いてある</li>
 <li><a class="reference external" href="https://docs.python.org/ja/3.6/c-api/init.html#releasing-the-gil-from-extension-code">拡張コード内でGILを解放する</a></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>注釈
+<div class="highlight-default"><div class="highlight"><pre><span></span>注釈
 GIL を解放するのはほとんどがシステムのI/O関数を呼び出す時ですが、メモリバッファに対する圧縮や
 暗号化のように、Pythonのオブジェクトにアクセスしない長時間かかる計算処理を呼び出すときもGIL
 を解放することは有益です。例えば、 zlib や hashlib モジュールは圧縮やハッシュ計算の前にGILを解放します。
@@ -351,7 +351,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <div class="section" id="cpu">
 <h2>CPUバウンドな処理を並列にするには？<a class="headerlink" href="#cpu" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">マルチプロセス</span></code> で <code class="docutils literal notranslate"><span class="pre">並列</span></code> に実行する</li>
+<li><code class="docutils literal"><span class="pre">マルチプロセス</span></code> で <code class="docutils literal"><span class="pre">並列</span></code> に実行する</li>
 <li>つまり、複数プロセスが独立してタスクを実行するという事</li>
 </ul>
 <p>注意点</p>
@@ -359,7 +359,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>同時に実行できるのは、CPUコア数分のみ</li>
 <li>それ以上はワーカー数(プロセス数)を増やしてもあまり意味はない</li>
 </ul>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># コア数を確かめる時は？</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -369,7 +369,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </div>
 <div class="section" id="processpoolexecuter-cpu">
 <h2>ProcessPoolExecuter - CPUバウンドな例<a class="headerlink" href="#processpoolexecuter-cpu" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -469,7 +469,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>かつてWebサーバの <a class="reference external" href="http://www.hyuki.com/yukiwiki/wiki.cgi?TheC10kProblem">C10K問題（クライアント1万台問題）</a> というものがあった</li>
 <li>プロセス数やスレッド数が増えすぎると、メモリを食いつぶしたり、コンテキストスイッチするコストが増大してサーバがパンクしてしまうという問題</li>
 <li>この頃から、シングルスレッドでもより多くの処理を捌くことが要求されるようになった</li>
-<li>その辺から出てきたのが次の <code class="docutils literal notranslate"><span class="pre">非同期I/O</span></code> です</li>
+<li>その辺から出てきたのが次の <code class="docutils literal"><span class="pre">非同期I/O</span></code> です</li>
 </ul>
 </div>
 <div class="section" id="i-o">
@@ -479,12 +479,12 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <h2>非同期I/O<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>基本的にI/O処理中はプログラムはブロックされる</li>
-<li>これを <code class="docutils literal notranslate"><span class="pre">同期I/O(ブロッキングI/O)</span></code> と呼ぶ</li>
-<li>対してブロックしないようにI/O処理することを <code class="docutils literal notranslate"><span class="pre">非同期I/O(ノンブロッキングI/O)</span></code> と呼ぶ</li>
+<li>これを <code class="docutils literal"><span class="pre">同期I/O(ブロッキングI/O)</span></code> と呼ぶ</li>
+<li>対してブロックしないようにI/O処理することを <code class="docutils literal"><span class="pre">非同期I/O(ノンブロッキングI/O)</span></code> と呼ぶ</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>より正確には <code class="docutils literal notranslate"><span class="pre">ノンブロッキングI/O</span></code> と <code class="docutils literal notranslate"><span class="pre">非同期I/O</span></code> は定義が異なる</li>
+<li>より正確には <code class="docutils literal"><span class="pre">ノンブロッキングI/O</span></code> と <code class="docutils literal"><span class="pre">非同期I/O</span></code> は定義が異なる</li>
 <li><a class="reference external" href="http://blog.takanabe.tokyo/2015/03/26/240/">ノンブロッキングI/Oと非同期I/Oの違いを理解する</a></li>
 </ul>
 </div></blockquote>
@@ -493,23 +493,23 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">イベントループ</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">I/O多重化</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">コルーチン</span></code></li>
+<li><code class="docutils literal"><span class="pre">イベントループ</span></code></li>
+<li><code class="docutils literal"><span class="pre">I/O多重化</span></code></li>
+<li><code class="docutils literal"><span class="pre">コルーチン</span></code></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="id27">
 <h2>イベントループ<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">イベント駆動プログラミング</span></code></li>
-<li>イベントを監視するためのループが <code class="docutils literal notranslate"><span class="pre">イベントループ</span></code> である</li>
+<li><code class="docutils literal"><span class="pre">イベント駆動プログラミング</span></code></li>
+<li>イベントを監視するためのループが <code class="docutils literal"><span class="pre">イベントループ</span></code> である</li>
 </ul>
 <p>どんな事をするのか？</p>
 <ul class="simple">
-<li>事前にイベントに対応する <code class="docutils literal notranslate"><span class="pre">イベントハンドラ</span></code> を <code class="docutils literal notranslate"><span class="pre">イベントループ</span></code> に登録</li>
-<li>イベントが発生したら <code class="docutils literal notranslate"><span class="pre">イベントキュー</span></code> に入れて管理</li>
-<li><code class="docutils literal notranslate"><span class="pre">イベントディスパッチャー</span></code> が <code class="docutils literal notranslate"><span class="pre">イベントハンドラ</span></code> を実行する</li>
+<li>事前にイベントに対応する <code class="docutils literal"><span class="pre">イベントハンドラ</span></code> を <code class="docutils literal"><span class="pre">イベントループ</span></code> に登録</li>
+<li>イベントが発生したら <code class="docutils literal"><span class="pre">イベントキュー</span></code> に入れて管理</li>
+<li><code class="docutils literal"><span class="pre">イベントディスパッチャー</span></code> が <code class="docutils literal"><span class="pre">イベントハンドラ</span></code> を実行する</li>
 </ul>
 <p>どんなのがイベント？</p>
 <ul class="simple">
@@ -541,13 +541,13 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <ul class="simple">
 <li>処理を任意のタイミングで中断/再開できる機能</li>
 <li>Pythonではジェネレータの拡張構文として実装されている</li>
-<li><code class="docutils literal notranslate"><span class="pre">ジェネレータベースのコルーチン</span></code></li>
+<li><code class="docutils literal"><span class="pre">ジェネレータベースのコルーチン</span></code></li>
 <li><a class="reference external" href="https://www.python.org/dev/peps/pep-0342/">PEP 342 – Coroutines via Enhanced Generators</a></li>
 </ul>
 </div>
 <div class="section" id="id31">
 <h2>ジェネレーターベースのコルーチン<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -614,23 +614,23 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>Python自身が公式に非同期I/Oのための共通のコンポーネント群を用意</li>
 <li><a class="reference external" href="https://www.python.org/dev/peps/pep-3156/">PEP 3156 – Asynchronous IO Support Rebooted: the “asyncio” Module</a></li>
 <li>Python3.4 から <a class="reference external" href="https://docs.python.org/3/library/asyncio.html">asyncio</a> モジュールが追加</li>
-<li>Python3.5 から <code class="docutils literal notranslate"><span class="pre">async/await</span></code> (ネイティブコルーチン) が利用可能になった</li>
+<li>Python3.5 から <code class="docutils literal"><span class="pre">async/await</span></code> (ネイティブコルーチン) が利用可能になった</li>
 </ul>
 </div>
 <div class="section" id="async-await">
 <h2>async/await<a class="headerlink" href="#async-await" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Python3.5 からは <code class="docutils literal notranslate"><span class="pre">asyn/await構文</span></code> (<code class="docutils literal notranslate"><span class="pre">ネイティブコルーチン</span></code>) が使える</li>
+<li>Python3.5 からは <code class="docutils literal"><span class="pre">asyn/await構文</span></code> (<code class="docutils literal"><span class="pre">ネイティブコルーチン</span></code>) が使える</li>
 </ul>
 <p>Python 3.4 以前</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@asyncio.coroutine</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nd">@asyncio.coroutine</span>
 <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
     <span class="k">yield from</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Python 3.5 以降</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
     <span class="n">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -641,7 +641,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <ul class="simple">
 <li>コルーチンをチェーンする公式のサンプル</li>
 </ul>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -708,7 +708,7 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 <li>asyncio のイベントループポリシーを差し替えるだけで使える</li>
 <li>コードはそのままにパフォーマンスを向上できる</li>
 </ul>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">uvloop</span>
@@ -737,12 +737,19 @@ GIL を解放するのはほとんどがシステムのI/O関数を呼び出す�
 </ul>
 </div>
 <div class="section" id="id40">
-<h2>感謝<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<h2>参考<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/tell-k/pyconjp2017/blob/master/reference.rst">https://github.com/tell-k/pyconjp2017/blob/master/reference.rst</a></li>
+<li>Webページ や 書籍 の著者の皆さん 本当に ありがとうございます。m(_ _)m</li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h2>感謝<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
 <p>忙しい中、レビューしてくださった。&#64;shimizukawaさん、&#64;crochacoさん、&#64;mahataさん、&#64;kamekoさん ありがとうございました。</p>
 <p>また参考にさせていただいた資料、本の著者の皆さま。本当ににありがとうございました。</p>
 </div>
-<div class="section" id="id41">
-<h2>ご静聴ありがとうございました<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id42">
+<h2>ご静聴ありがとうございました<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

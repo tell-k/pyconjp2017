@@ -1,3 +1,4 @@
-PyCon JP 2016 の 発表資料 です
+Pycon JP 2017 の発表資料です。
 
-https://tell-k.github.io/pyconjp2016/
+* Pythonをとりまく並行/非同期の話
+* https://pycon.jp/2017/ja/schedule/presentation/35/
