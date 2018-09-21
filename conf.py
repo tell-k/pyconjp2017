@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Test'
-copyright = u'2015, tell-k'
+copyright = u'2017, tell-k'
 author = u'tell-k'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -115,6 +115,7 @@ html_theme = "gopher"
 # documentation.
 #html_theme_options = {}
 html_theme_options  = {
+   'canonical':'https://tell-k.github.io/pyconjp2017',
    'ogp_image':'https://tell-k.github.io/pyconjp2017/_static/img/ogp.png',
    'ogp_description': 'PyCon JP 2017 の発表資料です。Pythonにおける並行/非同期処理を広く浅くまとめて紹介します。本セッションでは並行/非同期処理に触れる際に頻出するトピックを Pythonコード/ライブラリの話を交えながら、紹介していきます。',
 
