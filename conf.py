@@ -114,6 +114,21 @@ html_theme = "gopher"
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+html_theme_options  = {
+   'ogp_image':'https://tell-k.github.io/pyconjp2017/_static/img/ogp.png',
+   'ogp_description': 'PyCon JP 2017 の発表資料です。Pythonにおける並行/非同期処理を広く浅くまとめて紹介します。本セッションでは並行/非同期処理に触れる際に頻出するトピックを Pythonコード/ライブラリの話を交えながら、紹介していきます。',
+
+   'og_url':'https://tell-k.github.io/pyconjp2017',
+   'og_site_name':'github',
+   'og_type':'article',
+   'og_author':'https://github.com/tell-k',
+
+   'twitter_card_type':'summary_large_image"',
+   'twitter_card_site':'@github',
+   'twitter_card_creator':'@tell_k',
+
+   'note_enabled': False,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
