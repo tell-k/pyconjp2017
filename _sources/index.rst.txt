@@ -9,7 +9,7 @@ Pythonをとりまく並行/非同期の話
 で、誰？
 =====================================
 
-.. image:: https://pbs.twimg.com/profile_images/775582814871752704/J1TaucBz_400x400.jpg
+.. image:: https://pbs.twimg.com/profile_images/1045138776224231425/3GD8eWeG_200x200.jpg
 .. image:: https://dl.dropboxusercontent.com/spa/ghyn87yb4ejn5yy/vxjmiemo.png
 
 * tell-k
