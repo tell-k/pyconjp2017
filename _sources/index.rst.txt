@@ -490,8 +490,8 @@ I/O多重化
    - `inlineCallbacks <https://twistedmatrix.com/documents/current/api/twisted.internet.defer.html#inlineCallbacks>`_
 
  * - `Tornado <http://www.tornadoweb.org/en/stable/>`_
-   - `tornado.gen.coroutine <http://www.tornadoweb.org/en/stable/gen.html#tornado.gen.coroutine>`_
    - `tornado.ioloop <http://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop>`_
+   - `tornado.gen.coroutine <http://www.tornadoweb.org/en/stable/gen.html#tornado.gen.coroutine>`_
 
 たくさんフレンズがいるのは良いことだが・・・
 =================================================
